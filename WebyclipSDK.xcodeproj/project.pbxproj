@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		184032A01DAA769500196E48 /* WebyclipSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 1840329F1DAA769500196E48 /* WebyclipSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		184032A71DAA769500196E48 /* WebyclipSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1840329C1DAA769500196E48 /* WebyclipSDK.framework */; };
+		184032AC1DAA769500196E48 /* WebyclipSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184032AB1DAA769500196E48 /* WebyclipSDKTests.swift */; };
+		184032C61DAA7E2D00196E48 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184032C51DAA7E2D00196E48 /* Curry.framework */; };
+		184032C81DAA7E7B00196E48 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184032C71DAA7E7B00196E48 /* Nimble.framework */; };
+		184032CA1DAA7E8200196E48 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184032C91DAA7E8200196E48 /* Quick.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		184032A81DAA769500196E48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 184032931DAA769500196E48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1840329B1DAA769500196E48;
+			remoteInfo = WebyclipSDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1840329C1DAA769500196E48 /* WebyclipSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebyclipSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1840329F1DAA769500196E48 /* WebyclipSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebyclipSDK.h; sourceTree = "<group>"; };
+		184032A11DAA769500196E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184032A61DAA769500196E48 /* WebyclipSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebyclipSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		184032AB1DAA769500196E48 /* WebyclipSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebyclipSDKTests.swift; sourceTree = "<group>"; };
+		184032AD1DAA769500196E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184032C51DAA7E2D00196E48 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = "Carthage/Checkouts/Curry/build/Debug-iphoneos/Curry.framework"; sourceTree = "<group>"; };
+		184032C71DAA7E7B00196E48 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
+		184032C91DAA7E8200196E48 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Carthage/Checkouts/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		184032981DAA769500196E48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184032C61DAA7E2D00196E48 /* Curry.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184032A31DAA769500196E48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184032CA1DAA7E8200196E48 /* Quick.framework in Frameworks */,
+				184032C81DAA7E7B00196E48 /* Nimble.framework in Frameworks */,
+				184032A71DAA769500196E48 /* WebyclipSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		184032921DAA769500196E48 = {
+			isa = PBXGroup;
+			children = (
+				184032CB1DAA7EEB00196E48 /* Frameworks */,
+				1840329E1DAA769500196E48 /* WebyclipSDK */,
+				184032AA1DAA769500196E48 /* WebyclipSDKTests */,
+				1840329D1DAA769500196E48 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1840329D1DAA769500196E48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1840329C1DAA769500196E48 /* WebyclipSDK.framework */,
+				184032A61DAA769500196E48 /* WebyclipSDKTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1840329E1DAA769500196E48 /* WebyclipSDK */ = {
+			isa = PBXGroup;
+			children = (
+				1840329F1DAA769500196E48 /* WebyclipSDK.h */,
+				184032A11DAA769500196E48 /* Info.plist */,
+			);
+			path = WebyclipSDK;
+			sourceTree = "<group>";
+		};
+		184032AA1DAA769500196E48 /* WebyclipSDKTests */ = {
+			isa = PBXGroup;
+			children = (
+				184032AB1DAA769500196E48 /* WebyclipSDKTests.swift */,
+				184032AD1DAA769500196E48 /* Info.plist */,
+			);
+			path = WebyclipSDKTests;
+			sourceTree = "<group>";
+		};
+		184032CB1DAA7EEB00196E48 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				184032C91DAA7E8200196E48 /* Quick.framework */,
+				184032C71DAA7E7B00196E48 /* Nimble.framework */,
+				184032C51DAA7E2D00196E48 /* Curry.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		184032991DAA769500196E48 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184032A01DAA769500196E48 /* WebyclipSDK.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		1840329B1DAA769500196E48 /* WebyclipSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 184032B01DAA769500196E48 /* Build configuration list for PBXNativeTarget "WebyclipSDK" */;
+			buildPhases = (
+				184032971DAA769500196E48 /* Sources */,
+				184032981DAA769500196E48 /* Frameworks */,
+				184032991DAA769500196E48 /* Headers */,
+				1840329A1DAA769500196E48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebyclipSDK;
+			productName = WebyclipSDK;
+			productReference = 1840329C1DAA769500196E48 /* WebyclipSDK.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		184032A51DAA769500196E48 /* WebyclipSDKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 184032B31DAA769500196E48 /* Build configuration list for PBXNativeTarget "WebyclipSDKTests" */;
+			buildPhases = (
+				184032A21DAA769500196E48 /* Sources */,
+				184032A31DAA769500196E48 /* Frameworks */,
+				184032A41DAA769500196E48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				184032A91DAA769500196E48 /* PBXTargetDependency */,
+			);
+			name = WebyclipSDKTests;
+			productName = WebyclipSDKTests;
+			productReference = 184032A61DAA769500196E48 /* WebyclipSDKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		184032931DAA769500196E48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Nimrod Ben Yaakov";
+				TargetAttributes = {
+					1840329B1DAA769500196E48 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					184032A51DAA769500196E48 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 184032961DAA769500196E48 /* Build configuration list for PBXProject "WebyclipSDK" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 184032921DAA769500196E48;
+			productRefGroup = 1840329D1DAA769500196E48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1840329B1DAA769500196E48 /* WebyclipSDK */,
+				184032A51DAA769500196E48 /* WebyclipSDKTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1840329A1DAA769500196E48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184032A41DAA769500196E48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		184032971DAA769500196E48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		184032A21DAA769500196E48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				184032AC1DAA769500196E48 /* WebyclipSDKTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		184032A91DAA769500196E48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1840329B1DAA769500196E48 /* WebyclipSDK */;
+			targetProxy = 184032A81DAA769500196E48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		184032AE1DAA769500196E48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		184032AF1DAA769500196E48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		184032B11DAA769500196E48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Curry/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = WebyclipSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = webyclip.WebyclipSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		184032B21DAA769500196E48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Curry/build/Debug-iphoneos",
+				);
+				INFOPLIST_FILE = WebyclipSDK/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = webyclip.WebyclipSDK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		184032B41DAA769500196E48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(inherited) ";
+				INFOPLIST_FILE = WebyclipSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = webyclip.WebyclipSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		184032B51DAA769500196E48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(inherited) ";
+				INFOPLIST_FILE = WebyclipSDKTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = webyclip.WebyclipSDKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		184032961DAA769500196E48 /* Build configuration list for PBXProject "WebyclipSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184032AE1DAA769500196E48 /* Debug */,
+				184032AF1DAA769500196E48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		184032B01DAA769500196E48 /* Build configuration list for PBXNativeTarget "WebyclipSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184032B11DAA769500196E48 /* Debug */,
+				184032B21DAA769500196E48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		184032B31DAA769500196E48 /* Build configuration list for PBXNativeTarget "WebyclipSDKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				184032B41DAA769500196E48 /* Debug */,
+				184032B51DAA769500196E48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 184032931DAA769500196E48 /* Project object */;
+}
