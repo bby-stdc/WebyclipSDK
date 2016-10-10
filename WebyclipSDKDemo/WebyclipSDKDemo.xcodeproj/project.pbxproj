@@ -1,0 +1,299 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18956DC31DAB6918008A7534 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18956DC21DAB6918008A7534 /* AppDelegate.swift */; };
+		18956DC51DAB6918008A7534 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18956DC41DAB6918008A7534 /* ViewController.swift */; };
+		18956DC81DAB6918008A7534 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18956DC61DAB6918008A7534 /* Main.storyboard */; };
+		18956DCA1DAB6918008A7534 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18956DC91DAB6918008A7534 /* Assets.xcassets */; };
+		18956DCD1DAB6918008A7534 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18956DCB1DAB6918008A7534 /* LaunchScreen.storyboard */; };
+		18956DD51DAB69BA008A7534 /* WebyclipSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18956DD41DAB69BA008A7534 /* WebyclipSDK.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		18956DBF1DAB6918008A7534 /* WebyclipSDKDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebyclipSDKDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18956DC21DAB6918008A7534 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		18956DC41DAB6918008A7534 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		18956DC71DAB6918008A7534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18956DC91DAB6918008A7534 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18956DCC1DAB6918008A7534 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18956DCE1DAB6918008A7534 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18956DD41DAB69BA008A7534 /* WebyclipSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebyclipSDK.framework; path = "../../../../Library/Developer/Xcode/DerivedData/WebyclipSDK-brykvgqzhiknugaevtixqznyitbn/Build/Products/Debug-iphonesimulator/WebyclipSDK.framework"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18956DBC1DAB6918008A7534 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18956DD51DAB69BA008A7534 /* WebyclipSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18956DB61DAB6918008A7534 = {
+			isa = PBXGroup;
+			children = (
+				18956DD41DAB69BA008A7534 /* WebyclipSDK.framework */,
+				18956DC11DAB6918008A7534 /* WebyclipSDKDemo */,
+				18956DC01DAB6918008A7534 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18956DC01DAB6918008A7534 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18956DBF1DAB6918008A7534 /* WebyclipSDKDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18956DC11DAB6918008A7534 /* WebyclipSDKDemo */ = {
+			isa = PBXGroup;
+			children = (
+				18956DC21DAB6918008A7534 /* AppDelegate.swift */,
+				18956DC41DAB6918008A7534 /* ViewController.swift */,
+				18956DC61DAB6918008A7534 /* Main.storyboard */,
+				18956DC91DAB6918008A7534 /* Assets.xcassets */,
+				18956DCB1DAB6918008A7534 /* LaunchScreen.storyboard */,
+				18956DCE1DAB6918008A7534 /* Info.plist */,
+			);
+			path = WebyclipSDKDemo;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18956DBE1DAB6918008A7534 /* WebyclipSDKDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18956DD11DAB6918008A7534 /* Build configuration list for PBXNativeTarget "WebyclipSDKDemo" */;
+			buildPhases = (
+				18956DBB1DAB6918008A7534 /* Sources */,
+				18956DBC1DAB6918008A7534 /* Frameworks */,
+				18956DBD1DAB6918008A7534 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WebyclipSDKDemo;
+			productName = WebyclipSDKDemo;
+			productReference = 18956DBF1DAB6918008A7534 /* WebyclipSDKDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18956DB71DAB6918008A7534 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = Webyclip;
+				TargetAttributes = {
+					18956DBE1DAB6918008A7534 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 18956DBA1DAB6918008A7534 /* Build configuration list for PBXProject "WebyclipSDKDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18956DB61DAB6918008A7534;
+			productRefGroup = 18956DC01DAB6918008A7534 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18956DBE1DAB6918008A7534 /* WebyclipSDKDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18956DBD1DAB6918008A7534 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18956DCD1DAB6918008A7534 /* LaunchScreen.storyboard in Resources */,
+				18956DCA1DAB6918008A7534 /* Assets.xcassets in Resources */,
+				18956DC81DAB6918008A7534 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18956DBB1DAB6918008A7534 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18956DC51DAB6918008A7534 /* ViewController.swift in Sources */,
+				18956DC31DAB6918008A7534 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		18956DC61DAB6918008A7534 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18956DC71DAB6918008A7534 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18956DCB1DAB6918008A7534 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18956DCC1DAB6918008A7534 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18956DCF1DAB6918008A7534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		18956DD01DAB6918008A7534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18956DD21DAB6918008A7534 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WebyclipSDKDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = webyclip.WebyclipSDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18956DD31DAB6918008A7534 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WebyclipSDKDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = webyclip.WebyclipSDKDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18956DBA1DAB6918008A7534 /* Build configuration list for PBXProject "WebyclipSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18956DCF1DAB6918008A7534 /* Debug */,
+				18956DD01DAB6918008A7534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18956DD11DAB6918008A7534 /* Build configuration list for PBXNativeTarget "WebyclipSDKDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18956DD21DAB6918008A7534 /* Debug */,
+				18956DD31DAB6918008A7534 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18956DB71DAB6918008A7534 /* Project object */;
+}
