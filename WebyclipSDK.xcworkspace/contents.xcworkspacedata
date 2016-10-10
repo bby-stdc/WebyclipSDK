@@ -17,9 +17,6 @@
       location = "group:Carthage/Checkouts/Nimble/Nimble.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Carthage/Checkouts/Curry/Curry.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:WebyclipSDKDemo/WebyclipSDKDemo.xcodeproj">
    </FileRef>
    <FileRef

@@ -10,7 +10,6 @@
 		184032A01DAA769500196E48 /* WebyclipSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 1840329F1DAA769500196E48 /* WebyclipSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		184032A71DAA769500196E48 /* WebyclipSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1840329C1DAA769500196E48 /* WebyclipSDK.framework */; };
 		184032AC1DAA769500196E48 /* WebyclipSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184032AB1DAA769500196E48 /* WebyclipSDKTests.swift */; };
-		184032C61DAA7E2D00196E48 /* Curry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184032C51DAA7E2D00196E48 /* Curry.framework */; };
 		184032C81DAA7E7B00196E48 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184032C71DAA7E7B00196E48 /* Nimble.framework */; };
 		184032CA1DAA7E8200196E48 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184032C91DAA7E8200196E48 /* Quick.framework */; };
 		184032D81DAA895300196E48 /* WebyclipCarouselController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184032CC1DAA895300196E48 /* WebyclipCarouselController.swift */; };
@@ -87,7 +86,6 @@
 				18956DB51DAB67A5008A7534 /* CryptoSwift.framework in Frameworks */,
 				18956DAF1DAB5FA9008A7534 /* Alamofire.framework in Frameworks */,
 				184032FD1DAA8AB000196E48 /* SwiftyJSON.framework in Frameworks */,
-				184032C61DAA7E2D00196E48 /* Curry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

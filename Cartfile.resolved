@@ -1,6 +1,5 @@
 github "Alamofire/Alamofire" "3.5.1"
 github "krzyzanowskim/CryptoSwift" "0.2.3"
-github "thoughtbot/Curry" "v2.3.3"
 github "Quick/Nimble" "v4.1.0"
 github "Quick/Quick" "v0.9.3"
 github "SwiftyJSON/SwiftyJSON" "2.4.0"

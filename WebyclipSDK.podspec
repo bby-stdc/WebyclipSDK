@@ -11,5 +11,7 @@ Pod::Spec.new do |spec|
   spec.source = { git: "https://github.com/enbaya/WebyclipSDK.git", tag: "v#{spec.version}", submodules: true }
   spec.source_files = "WebyclipSDK/**/*.{h,swift}"
 
-  spec.dependency "Curry", "~> 1.4.0"
+  spec.dependency "SwiftyJSON", "~> 2.4.0"
+  spec.dependency "Alamofire", "~> 3.0"
+  spec.dependency "CryptoSwift", "~> 0.2.3"
 end
