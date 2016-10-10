@@ -2,6 +2,15 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Carthage/Checkouts/CryptoSwift/CryptoSwift.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/Alamofire/Alamofire.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/SwiftyJSON/SwiftyJSON.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Carthage/Checkouts/Quick/Quick.xcodeproj">
    </FileRef>
    <FileRef
