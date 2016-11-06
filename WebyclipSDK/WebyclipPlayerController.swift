@@ -1,67 +1,168 @@
-
-
 import UIKit
 import SwiftyJSON
 import WebKit
+import YouTubeiOSPlayerHelper
 
 /**
  The Webyclip's Player controller
-*/
+ */
 public class WebyclipPlayerController: UIViewController, WKNavigationDelegate, WKScriptMessageHandler {
     
-    private var session: WebyclipSession?
-    private var context: WebyclipContext?
-    private var webView: WKWebView?
-    private var userContentController: WKUserContentController?
-    private var loadedMedias = false
+    
     /// Delegate for getting callbacks
     public var delegate: WebyclipPlayerProtocol?
+  
+    // MARK: - IBOutlets
+    @IBOutlet var uiView: UIView!
+    @IBOutlet var closeButton: UIButton!
+    @IBOutlet var counter: UILabel!
+    @IBOutlet var player: UICollectionView!
+    @IBOutlet var disclaimer: UIView!
+    
+    // MARK: - IBActions
+    @IBAction func closeButtonHandler(sender: AnyObject) {
+        //dismissViewControllerAnimated(true, completion: nil)
+        closeView()
+        
+    }
+    
+    @IBAction func disclaimerHandler(sender: AnyObject) {
+        showHideDisclaimer()
+    }
+    
+    @IBAction func disclaimerCloseButtonHandler(sender: AnyObject) {
+        showHideDisclaimer()
+    }
+    
+    // MARK: - Private
+    private var session: WebyclipSession?
+    private var context: WebyclipContext?
+    private var nextMediaIndex: Int?
+    private var loadedMedias = false
+    private var currentMediaIndex = 0
+    private var cellHeight: CGFloat?
+    private var playersObjects: [YTPlayerView] = []
+    public var initialIndex: Int?
+    
+    
+    private var medias: [WebyclipPlayerItem]?
+    private struct Storyboard {
+        static let CellIdentifier = "WebyClip Player Cell"
+    }
+    
+    private var userContentController: WKUserContentController?
+    
+    private func showHideDisclaimer() {
+        self.disclaimer.hidden = !self.disclaimer.hidden
+    }
+    
+    // MARK: - Public
     
     /**
-        Initializes WebyclipPlayerController with `WebyclipSession` and `WebyclipContext`
+     Initializes WebyclipPlayerController with `WebyclipSession` and `WebyclipContext`
      */
     public init(session: WebyclipSession, context: WebyclipContext) {
-
         super.init(nibName: nil, bundle: nil)
         
-
         self.session = session
         self.context = context
+        self.nextMediaIndex = getNextMediaIndex()
+        self.medias = WebyclipPlayerItem.createCarouselItems(context.items)
     }
     
     required public init?(coder aDecoder: NSCoder) {
-
         super.init(coder: aDecoder)
-        
-
     }
-
-    public override func viewDidLoad() {
+    
+    override public func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return .LightContent
+    }
+    
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         self.userContentController = WKUserContentController()
         self.userContentController?.addScriptMessageHandler(self, name: "webyclipIosHandler")
         
-        let config = WKWebViewConfiguration()
-        config.allowsInlineMediaPlayback = true
-        config.mediaPlaybackAllowsAirPlay = true
-        config.mediaPlaybackRequiresUserAction = false
-        config.userContentController = self.userContentController!
+        let view = loadViewFromNib()
+        self.view.addSubview(view)
         
-        self.webView = WKWebView(frame: self.view.bounds, configuration: config)
-        self.webView!.scrollView.bounces = false
-        self.webView!.scrollView.bouncesZoom = false
-        self.view.addSubview(self.webView!)
-        self.webView!.navigationDelegate = self
+        self.player.registerNib(UINib(nibName: "WebyclipPlayerCell", bundle: NSBundle(forClass: self.dynamicType)), forCellWithReuseIdentifier: "WebyClip Player Cell")
         
-        self.webView!.loadRequest(NSURLRequest(URL: NSURL(string: "https://6bf746ad5bc91a240a3d-1d8fbdf7ecdc2b67730d7c561f0d1dfd.ssl.cf2.rackcdn.com/static/player/WebyclipPlayerWrapperHTML.html")!))
+        self.uiView.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
         
-
-        // Do any additional setup after loading the view.
+        setupHandlers()
+        
     }
     
+    public override func viewDidAppear(animated: Bool) {
+        self.counter.text = String(self.initialIndex! + 1) + " of " + String(self.medias!.count)
+        self.player?.scrollToItemAtIndexPath(NSIndexPath(forItem: self.initialIndex!, inSection: 0), atScrollPosition: .Top, animated: false)
+        
+        for index in 0...self.medias!.count {
+       //     let cell = self.player.cellForItemAtIndexPath(NSIndexPath(forItem: index, inSection: 0)) as! WebyclipPlayerCollectionViewCell
+         //  if (!self.playersObjects.contains(cell.mediaPlayer)) {
+          //      self.playersObjects.append(cell.mediaPlayer)
+        //    }
+            
+        }
+    }
+    
+    public func openPlayer(index: Int) {
+        
+    }
+    
+    
+    private func getNextMediaIndex() -> Int {
+        let idx = self.currentMediaIndex + 1 < self.context!.items.count ? self.currentMediaIndex + 1 : 0
+        return idx;
+    }
+    
+    private func setupHandlers() {
+       
+    }
+    
+   
+    
+    
+   
+    
+   
+    
+    
+    private func closeView() {
+        UIApplication.sharedApplication().statusBarStyle = .Default
+        self.view.removeFromSuperview()
+    }
+    
+    
+    private func loadViewFromNib() -> UIView {
+        let bundle = NSBundle(forClass: self.dynamicType)
+        let nib = UINib(nibName: "WebyclipPlayer", bundle: bundle)
+        let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        
+        return view
+    }
+    
+    
+    
+    private func getMediaThumbnail(mediaId: String) -> UIImage {
+        let url = NSURL(string: "https://img.youtube.com/vi/" + mediaId + "/mqdefault.jpg")!
+        let data = NSData(contentsOfURL: url)!
+        return UIImage(data: data)!
+    }
+    
+    private func setNextMedia() {
+        self.currentMediaIndex = getNextMediaIndex()
+        self.nextMediaIndex = getNextMediaIndex()
+      //  setMediaInfo(self.currentMediaIndex, nextIdx: self.nextMediaIndex!)
+    }
+    
+       
+    
+    
     public override func viewDidLayoutSubviews() {
-        self.webView?.frame = self.view.bounds
+        //self.webView?.frame = self.view.bounds
     }
     
     public func play(media: WebyclipMedia) {
@@ -76,14 +177,14 @@ public class WebyclipPlayerController: UIViewController, WKNavigationDelegate, W
         let scriptString = "window.play(\(mediaString!))"
         
         
-        self.webView?.evaluateJavaScript(scriptString, completionHandler: { result, error in
+        //self.webView?.evaluateJavaScript(scriptString, completionHandler: { result, error in
             
-        })
+        //})
     }
-
+    
     public func webView(webView: WKWebView, didFinishNavigation navigation: WKNavigation!) {
         
-        if (!self.loadedMedias) {
+        /*if (!self.loadedMedias) {
             var items = [JSON]()
             for item in (self.context?.items)! {
                 items.append(JSON([
@@ -103,7 +204,7 @@ public class WebyclipPlayerController: UIViewController, WKNavigationDelegate, W
             })
             
             self.loadedMedias = true
-        }
+        }*/
         
     }
     
@@ -137,37 +238,113 @@ public class WebyclipPlayerController: UIViewController, WKNavigationDelegate, W
                 mediaItem.duration = json["data"]["media"]["base_media"]["duration"].intValue
                 self.delegate?.didSocialShare(mediaItem, socialNetwork: json["data"]["network"].stringValue)
                 break;
-
+                
             default: break
             }
         }
     }
-
+    
     
     override public func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
         return UIInterfaceOrientationMask.All
     }
-
+    
     
     public override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     deinit {
-        if webView != nil {
-            webView?.navigationDelegate = nil
-        }
+        //if webView != nil {
+           // webView?.navigationDelegate = nil
+        //}
     }
-
+    
     /*
-    // MARK: - Navigation
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+// MARK: - YTPlayerViewDelegate
+extension WebyclipPlayerController: YTPlayerViewDelegate {
+    public func playerView(playerView: YTPlayerView!, didChangeToState state: YTPlayerState) {
+        switch(state) {
+        case YTPlayerState.Buffering:
+            print("buffering")
+            break
+        case YTPlayerState.Unstarted:
+            print("Unstarted")
+            break
+        case YTPlayerState.Queued:
+            print("Ready to play")
+            break
+        case YTPlayerState.Playing:
+            print("Video playing")
+            break
+        case YTPlayerState.Paused:
+            print("Video paused")
+            break
+        default:
+            break
+        }
+        
     }
-    */
+}
+
+// MARK: - UICollectionViewDataSource
+extension WebyclipPlayerController: UICollectionViewDataSource {
+    public func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.medias!.count
+    }
+    
+    public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as! WebyclipPlayerCollectionViewCell
+        print(indexPath.item)
+        cell.media = self.medias![indexPath.item]
+        cell.mediaPlayer.delegate = self
+        
+        return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension WebyclipPlayerController: UICollectionViewDelegateFlowLayout {
+    public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+        self.cellHeight = collectionView.bounds.size.height * 0.85
+        return CGSizeMake(collectionView.bounds.size.width, self.cellHeight!)
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+extension WebyclipPlayerController: UIScrollViewDelegate {
+    public func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+        let layout = self.player?.collectionViewLayout as! UICollectionViewFlowLayout
+        var offset = targetContentOffset.memory
+        let index = (offset.y + scrollView.contentInset.top)  / self.cellHeight!
+        let roundedIndex =  round(index)
+        let intIndex = Int(roundedIndex)
+        
+        self.counter.text = String(intIndex + 1) + " of " + String(self.medias!.count)
+        print("INT INDEX _ " + String(intIndex))
+        //       self.playersObjects[intIndex].playVideo()
+        
+        
+        
+        offset = CGPoint(x: scrollView.contentInset.left, y: roundedIndex * self.cellHeight!)
+        targetContentOffset.memory = offset
+    }
+
 
 }

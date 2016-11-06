@@ -43,6 +43,9 @@ public class WebyclipSession {
                         mediaItem.mediaId = item["external_id"].stringValue
                         mediaItem.providerName = item["provider"].stringValue
                         mediaItem.relatedItems = []
+                        mediaItem.title = item["base_media"]["provider_title"].stringValue
+                        mediaItem.author = item["base_media"]["channel_name"].stringValue
+                        mediaItem.publishDate = NSDate(timeIntervalSince1970: item["base_media"]["published_at"].doubleValue / 1000)
                         mediaItem.duration = item["base_media"]["duration"].intValue
                         webyclipMedia.append(mediaItem)
                         
@@ -59,13 +62,14 @@ public class WebyclipSession {
     /**
      Create a carousel component with a thumbnail for each media.
      
-     - parameter config:    Carousel configuration `WebyclipCarouselConfig`
+     - parameter carouselConfig:    Carousel configuration `WebyclipCarouselConfig`
+     - parameter playerConfig:    Player configuration `WebyclipPlayerConfig`
      - parameter context:   Bind this carousel to a context. When the context loads, the context medias will be set to the carousel.
 
      - returns `WebyclipCarouselController`
      */
-    public func createCarousel(config: WebyclipCarouselConfig, context: WebyclipContext) -> WebyclipCarouselController {
-        return WebyclipCarouselController(session: self, context: context)
+    public func createCarousel(context: WebyclipContext, player: WebyclipPlayerController, carouselConfig: WebyclipCarouselConfig) -> WebyclipCarouselController {
+        return WebyclipCarouselController(session: self, context: context, player: player)
     }
 
     /**

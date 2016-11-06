@@ -11,54 +11,71 @@ import WebyclipSDK
 
 class ViewController: UIViewController, WebyclipCarouselProtocol, WebyclipPlayerProtocol {
     
+    var session : WebyclipSession?
+    var contextConfig: WebyclipContextConfig?
     var playerController : WebyclipPlayerController?
     var carouselController : WebyclipCarouselController?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let session = WebyclipSDKManager.sharedManager.createSession("bestbuy:bccc67d4b0e5885cd603-ad91f58f506454f5c2d14d3c7ead3377.ssl.cf2.rackcdn.com")
-        let contextConfig = WebyclipContextConfig(id: "719192596023")
+        let button = UIButton(type: .System)
+        button.frame = CGRectMake(self.view.bounds.size.width / 2 - 50, self.view.bounds.size.height / 2 - 25, 100, 50)
+        button.backgroundColor = UIColor.blackColor()
+        button.setTitle("Watch Video", forState: UIControlState.Normal)
+        button.addTarget(self, action: #selector(ViewController.watchVideo(_:)), forControlEvents: UIControlEvents.TouchUpInside)
+       // self.view.addSubview(button)
         
-        session.createContext(contextConfig, success:
+        self.session = WebyclipSDKManager.sharedManager.createSession("bestbuy:bccc67d4b0e5885cd603-ad91f58f506454f5c2d14d3c7ead3377.ssl.cf2.rackcdn.com")
+        self.contextConfig = WebyclipContextConfig(id: "027242891074")
+        
+        self.session!.createContext(self.contextConfig!, success:
             { context in
-                
-                
                 let playerConfig = WebyclipPlayerConfig()
-                self.playerController = session.createPlayer(playerConfig, context: context)
+                self.playerController = self.session!.createPlayer(playerConfig, context: context)
                 self.playerController?.delegate = self
-                self.playerController!.view.frame = CGRect(origin: self.view.bounds.origin, size: CGSize(width: self.view.bounds.size.width , height: 400))
-                self.view.addSubview(self.playerController!.view)
                 
                 let carouselConfig = WebyclipCarouselConfig()
-                self.carouselController = session.createCarousel(carouselConfig, context: context)
+                self.carouselController = self.session!.createCarousel(context, player: self.playerController!, carouselConfig: carouselConfig)
                 self.carouselController?.delegate = self
-                self.carouselController!.view.frame = CGRect(origin: CGPoint(x: self.view.bounds.origin.x, y: 400), size: CGSize(width: self.view.bounds.size.width , height: self.view.bounds.size.height - 400))
                 self.view.addSubview(self.carouselController!.view)
             }, error: { error in
         })
-        
+
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    public func didClick(media: WebyclipMedia) {
+    func watchVideo(sender: UIButton!) {
+        self.session!.createContext(self.contextConfig!, success:
+            { context in
+                let playerConfig = WebyclipPlayerConfig()
+                self.playerController = self.session!.createPlayer(playerConfig, context: context)
+                self.playerController?.delegate = self
+                self.playerController?.initialIndex = 3
+                self.view.addSubview(self.playerController!.view)
+            }, error: { error in
+        })
+
+    }
+    
+    func didClick(media: WebyclipMedia) {
         print (media)
         self.playerController!.play(media)
     }
     
-    public func didPlayStart(media: WebyclipMedia) {
+    func didPlayStart(media: WebyclipMedia) {
         print(media)
     }
     
-    public func didPlayEnd(media: WebyclipMedia, durationSeconds: Int) {
+    func didPlayEnd(media: WebyclipMedia, durationSeconds: Int) {
         print (durationSeconds)
     }
     
-    public func didRelatedItemClick(media: WebyclipMedia, relatedItem: WebyclipRelatedItem) {
+    func didRelatedItemClick(media: WebyclipMedia, relatedItem: WebyclipRelatedItem) {
         
     }
     
-    public func didSocialShare(media: WebyclipMedia, socialNetwork: String) {
+    func didSocialShare(media: WebyclipMedia, socialNetwork: String) {
         print (socialNetwork)
     }
     

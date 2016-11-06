@@ -14,4 +14,5 @@ Pod::Spec.new do |spec|
   spec.dependency "SwiftyJSON", "~> 2.4.0"
   spec.dependency "Alamofire", "~> 3.0"
   spec.dependency "CryptoSwift", "~> 0.2.3"
+  spec.dependency "youtube-ios-player-helper", "~> 0.1.4"
 end

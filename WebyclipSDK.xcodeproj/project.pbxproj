@@ -13,7 +13,6 @@
 		184032C81DAA7E7B00196E48 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184032C71DAA7E7B00196E48 /* Nimble.framework */; };
 		184032CA1DAA7E8200196E48 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184032C91DAA7E8200196E48 /* Quick.framework */; };
 		184032D81DAA895300196E48 /* WebyclipCarouselController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184032CC1DAA895300196E48 /* WebyclipCarouselController.swift */; };
-		184032D91DAA895300196E48 /* WebyclipPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184032CD1DAA895300196E48 /* WebyclipPlayerController.swift */; };
 		184032DA1DAA895300196E48 /* WebyclipSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184032CE1DAA895300196E48 /* WebyclipSession.swift */; };
 		184032DB1DAA895300196E48 /* WebyclipMedia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184032CF1DAA895300196E48 /* WebyclipMedia.swift */; };
 		184032DC1DAA895300196E48 /* WebyclipPlayerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184032D01DAA895300196E48 /* WebyclipPlayerConfig.swift */; };
@@ -27,6 +26,18 @@
 		184032FD1DAA8AB000196E48 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184032FC1DAA8AB000196E48 /* SwiftyJSON.framework */; };
 		18956DAF1DAB5FA9008A7534 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18956DAE1DAB5FA9008A7534 /* Alamofire.framework */; };
 		18956DB51DAB67A5008A7534 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18956DB41DAB67A5008A7534 /* CryptoSwift.framework */; };
+		B94AF9951DC0B5FC00A681C0 /* YouTubeiOSPlayerHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94AF9941DC0B5FC00A681C0 /* YouTubeiOSPlayerHelper.framework */; };
+		B94AF9971DC0B91B00A681C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94AF9961DC0B91B00A681C0 /* Images.xcassets */; };
+		B97840091DCD2402008DA629 /* WebyclipPlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B97840081DCD2402008DA629 /* WebyclipPlayerCell.xib */; };
+		B978400B1DCD2749008DA629 /* WebyclipPlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B978400A1DCD2749008DA629 /* WebyclipPlayerCollectionViewCell.swift */; };
+		B978400D1DCD2779008DA629 /* WebyclipPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B978400C1DCD2779008DA629 /* WebyclipPlayerItem.swift */; };
+		B978400F1DCD2941008DA629 /* WebyclipPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = B978400E1DCD2941008DA629 /* WebyclipPlayer.xib */; };
+		B97840111DCD5982008DA629 /* WebyclipPlayerCloseAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97840101DCD5982008DA629 /* WebyclipPlayerCloseAnimator.swift */; };
+		B9C5BD841DCB1BA800B812AE /* WebyclipCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C5BD831DCB1BA800B812AE /* WebyclipCarouselItem.swift */; };
+		B9C5BD861DCB353400B812AE /* WebyclipCarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C5BD851DCB353400B812AE /* WebyclipCarouselCollectionViewCell.swift */; };
+		B9C5BD881DCB3E3100B812AE /* WebyclipCarousel.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9C5BD871DCB3E3100B812AE /* WebyclipCarousel.xib */; };
+		B9C5BD8A1DCB3FBE00B812AE /* WebyclipCarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9C5BD891DCB3FBE00B812AE /* WebyclipCarouselCell.xib */; };
+		B9CD5AB01DB7C5D9002B96E3 /* WebyclipPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CD5AAE1DB7C5D9002B96E3 /* WebyclipPlayerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,11 +69,9 @@
 		184032A61DAA769500196E48 /* WebyclipSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebyclipSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		184032AB1DAA769500196E48 /* WebyclipSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebyclipSDKTests.swift; sourceTree = "<group>"; };
 		184032AD1DAA769500196E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		184032C51DAA7E2D00196E48 /* Curry.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Curry.framework; path = "Carthage/Checkouts/Curry/build/Debug-iphoneos/Curry.framework"; sourceTree = "<group>"; };
-		184032C71DAA7E7B00196E48 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = "Carthage/Checkouts/Nimble/build/Debug-iphoneos/Nimble.framework"; sourceTree = "<group>"; };
-		184032C91DAA7E8200196E48 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = "Carthage/Checkouts/Quick/build/Debug-iphoneos/Quick.framework"; sourceTree = "<group>"; };
+		184032C71DAA7E7B00196E48 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		184032C91DAA7E8200196E48 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		184032CC1DAA895300196E48 /* WebyclipCarouselController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipCarouselController.swift; sourceTree = "<group>"; };
-		184032CD1DAA895300196E48 /* WebyclipPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipPlayerController.swift; sourceTree = "<group>"; };
 		184032CE1DAA895300196E48 /* WebyclipSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipSession.swift; sourceTree = "<group>"; };
 		184032CF1DAA895300196E48 /* WebyclipMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipMedia.swift; sourceTree = "<group>"; };
 		184032D01DAA895300196E48 /* WebyclipPlayerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipPlayerConfig.swift; sourceTree = "<group>"; };
@@ -73,9 +82,21 @@
 		184032D51DAA895300196E48 /* WebyclipCarouselProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipCarouselProtocol.swift; sourceTree = "<group>"; };
 		184032D61DAA895300196E48 /* WebyclipPlayerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipPlayerProtocol.swift; sourceTree = "<group>"; };
 		184032D71DAA895300196E48 /* WebyclipRelatedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipRelatedItem.swift; sourceTree = "<group>"; };
-		184032FC1DAA8AB000196E48 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "Carthage/Checkouts/SwiftyJSON/build/Debug-iphoneos/SwiftyJSON.framework"; sourceTree = "<group>"; };
-		18956DAE1DAB5FA9008A7534 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Carthage/Checkouts/Alamofire/build/Debug-iphoneos/Alamofire.framework"; sourceTree = "<group>"; };
-		18956DB41DAB67A5008A7534 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = "Carthage/Checkouts/CryptoSwift/build/Debug-iphoneos/CryptoSwift.framework"; sourceTree = "<group>"; };
+		184032FC1DAA8AB000196E48 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		18956DAE1DAB5FA9008A7534 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		18956DB41DAB67A5008A7534 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
+		B94AF9941DC0B5FC00A681C0 /* YouTubeiOSPlayerHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouTubeiOSPlayerHelper.framework; path = Carthage/Build/iOS/YouTubeiOSPlayerHelper.framework; sourceTree = "<group>"; };
+		B94AF9961DC0B91B00A681C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B97840081DCD2402008DA629 /* WebyclipPlayerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebyclipPlayerCell.xib; sourceTree = "<group>"; };
+		B978400A1DCD2749008DA629 /* WebyclipPlayerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipPlayerCollectionViewCell.swift; sourceTree = "<group>"; };
+		B978400C1DCD2779008DA629 /* WebyclipPlayerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipPlayerItem.swift; sourceTree = "<group>"; };
+		B978400E1DCD2941008DA629 /* WebyclipPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebyclipPlayer.xib; sourceTree = "<group>"; };
+		B97840101DCD5982008DA629 /* WebyclipPlayerCloseAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipPlayerCloseAnimator.swift; sourceTree = "<group>"; };
+		B9C5BD831DCB1BA800B812AE /* WebyclipCarouselItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipCarouselItem.swift; sourceTree = "<group>"; };
+		B9C5BD851DCB353400B812AE /* WebyclipCarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipCarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		B9C5BD871DCB3E3100B812AE /* WebyclipCarousel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebyclipCarousel.xib; sourceTree = "<group>"; };
+		B9C5BD891DCB3FBE00B812AE /* WebyclipCarouselCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebyclipCarouselCell.xib; sourceTree = "<group>"; };
+		B9CD5AAE1DB7C5D9002B96E3 /* WebyclipPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipPlayerController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B94AF9951DC0B5FC00A681C0 /* YouTubeiOSPlayerHelper.framework in Frameworks */,
 				18956DB51DAB67A5008A7534 /* CryptoSwift.framework in Frameworks */,
 				18956DAF1DAB5FA9008A7534 /* Alamofire.framework in Frameworks */,
 				184032FD1DAA8AB000196E48 /* SwiftyJSON.framework in Frameworks */,
@@ -124,20 +146,15 @@
 		1840329E1DAA769500196E48 /* WebyclipSDK */ = {
 			isa = PBXGroup;
 			children = (
-				184032CC1DAA895300196E48 /* WebyclipCarouselController.swift */,
-				184032CD1DAA895300196E48 /* WebyclipPlayerController.swift */,
-				184032CE1DAA895300196E48 /* WebyclipSession.swift */,
-				184032CF1DAA895300196E48 /* WebyclipMedia.swift */,
-				184032D01DAA895300196E48 /* WebyclipPlayerConfig.swift */,
-				184032D11DAA895300196E48 /* WebyclipCarouselConfig.swift */,
-				184032D21DAA895300196E48 /* WebyclipContext.swift */,
-				184032D31DAA895300196E48 /* WebyclipContextConfig.swift */,
+				B9C5BD8D1DCB45EE00B812AE /* Model */,
+				B9C5BD8C1DCB45D500B812AE /* WebyclipCarousel */,
+				B9C5BD8B1DCB45A200B812AE /* WebyclipPlayer */,
 				184032D41DAA895300196E48 /* WebyclipSDKManager.swift */,
 				184032D51DAA895300196E48 /* WebyclipCarouselProtocol.swift */,
 				184032D61DAA895300196E48 /* WebyclipPlayerProtocol.swift */,
-				184032D71DAA895300196E48 /* WebyclipRelatedItem.swift */,
 				1840329F1DAA769500196E48 /* WebyclipSDK.h */,
 				184032A11DAA769500196E48 /* Info.plist */,
+				B94AF9961DC0B91B00A681C0 /* Images.xcassets */,
 			);
 			path = WebyclipSDK;
 			sourceTree = "<group>";
@@ -154,14 +171,53 @@
 		184032CB1DAA7EEB00196E48 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B94AF9941DC0B5FC00A681C0 /* YouTubeiOSPlayerHelper.framework */,
 				18956DB41DAB67A5008A7534 /* CryptoSwift.framework */,
 				18956DAE1DAB5FA9008A7534 /* Alamofire.framework */,
 				184032FC1DAA8AB000196E48 /* SwiftyJSON.framework */,
 				184032C91DAA7E8200196E48 /* Quick.framework */,
 				184032C71DAA7E7B00196E48 /* Nimble.framework */,
-				184032C51DAA7E2D00196E48 /* Curry.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B9C5BD8B1DCB45A200B812AE /* WebyclipPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				B97840101DCD5982008DA629 /* WebyclipPlayerCloseAnimator.swift */,
+				B9CD5AAE1DB7C5D9002B96E3 /* WebyclipPlayerController.swift */,
+				B978400A1DCD2749008DA629 /* WebyclipPlayerCollectionViewCell.swift */,
+				B978400E1DCD2941008DA629 /* WebyclipPlayer.xib */,
+				B97840081DCD2402008DA629 /* WebyclipPlayerCell.xib */,
+			);
+			name = WebyclipPlayer;
+			sourceTree = "<group>";
+		};
+		B9C5BD8C1DCB45D500B812AE /* WebyclipCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				184032CC1DAA895300196E48 /* WebyclipCarouselController.swift */,
+				B9C5BD851DCB353400B812AE /* WebyclipCarouselCollectionViewCell.swift */,
+				B9C5BD871DCB3E3100B812AE /* WebyclipCarousel.xib */,
+				B9C5BD891DCB3FBE00B812AE /* WebyclipCarouselCell.xib */,
+			);
+			name = WebyclipCarousel;
+			sourceTree = "<group>";
+		};
+		B9C5BD8D1DCB45EE00B812AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				184032D11DAA895300196E48 /* WebyclipCarouselConfig.swift */,
+				B9C5BD831DCB1BA800B812AE /* WebyclipCarouselItem.swift */,
+				184032D21DAA895300196E48 /* WebyclipContext.swift */,
+				184032D31DAA895300196E48 /* WebyclipContextConfig.swift */,
+				184032CF1DAA895300196E48 /* WebyclipMedia.swift */,
+				184032D01DAA895300196E48 /* WebyclipPlayerConfig.swift */,
+				B978400C1DCD2779008DA629 /* WebyclipPlayerItem.swift */,
+				184032D71DAA895300196E48 /* WebyclipRelatedItem.swift */,
+				184032CE1DAA895300196E48 /* WebyclipSession.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +312,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9C5BD881DCB3E3100B812AE /* WebyclipCarousel.xib in Resources */,
+				B94AF9971DC0B91B00A681C0 /* Images.xcassets in Resources */,
+				B9C5BD8A1DCB3FBE00B812AE /* WebyclipCarouselCell.xib in Resources */,
+				B97840091DCD2402008DA629 /* WebyclipPlayerCell.xib in Resources */,
+				B978400F1DCD2941008DA629 /* WebyclipPlayer.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,18 +334,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B97840111DCD5982008DA629 /* WebyclipPlayerCloseAnimator.swift in Sources */,
 				184032E01DAA895300196E48 /* WebyclipSDKManager.swift in Sources */,
 				184032DF1DAA895300196E48 /* WebyclipContextConfig.swift in Sources */,
 				184032D81DAA895300196E48 /* WebyclipCarouselController.swift in Sources */,
+				B978400B1DCD2749008DA629 /* WebyclipPlayerCollectionViewCell.swift in Sources */,
 				184032DC1DAA895300196E48 /* WebyclipPlayerConfig.swift in Sources */,
 				184032DB1DAA895300196E48 /* WebyclipMedia.swift in Sources */,
 				184032DA1DAA895300196E48 /* WebyclipSession.swift in Sources */,
 				184032E11DAA895300196E48 /* WebyclipCarouselProtocol.swift in Sources */,
+				B9C5BD841DCB1BA800B812AE /* WebyclipCarouselItem.swift in Sources */,
 				184032DD1DAA895300196E48 /* WebyclipCarouselConfig.swift in Sources */,
 				184032DE1DAA895300196E48 /* WebyclipContext.swift in Sources */,
 				184032E21DAA895300196E48 /* WebyclipPlayerProtocol.swift in Sources */,
-				184032D91DAA895300196E48 /* WebyclipPlayerController.swift in Sources */,
+				B9C5BD861DCB353400B812AE /* WebyclipCarouselCollectionViewCell.swift in Sources */,
 				184032E31DAA895300196E48 /* WebyclipRelatedItem.swift in Sources */,
+				B978400D1DCD2779008DA629 /* WebyclipPlayerItem.swift in Sources */,
+				B9CD5AB01DB7C5D9002B96E3 /* WebyclipPlayerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +472,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Checkouts/Curry/build/Debug-iphoneos",
@@ -413,6 +480,9 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftMD5/build/Debug",
 					"$(PROJECT_DIR)/Carthage/Checkouts/CryptoSwift/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Checkouts/youtube-ios-player-helper/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Swift-YouTube-Player/YouTubePlayer/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator",
 				);
 				INFOPLIST_FILE = WebyclipSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -433,6 +503,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Checkouts/Curry/build/Debug-iphoneos",
@@ -440,6 +511,9 @@
 					"$(PROJECT_DIR)/Carthage/Checkouts/Alamofire/build/Debug-iphoneos",
 					"$(PROJECT_DIR)/Carthage/Checkouts/SwiftMD5/build/Debug",
 					"$(PROJECT_DIR)/Carthage/Checkouts/CryptoSwift/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Checkouts/youtube-ios-player-helper/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Carthage/Checkouts/Swift-YouTube-Player/YouTubePlayer/build/Debug-iphoneos",
+					"$(PROJECT_DIR)/Build/Products/Debug-iphonesimulator",
 				);
 				INFOPLIST_FILE = WebyclipSDK/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";

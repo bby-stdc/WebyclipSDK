@@ -1,3 +1,4 @@
 github "SwiftyJSON/SwiftyJSON" == 2.4.0
 github "Alamofire/Alamofire" ~> 3.0
 github "krzyzanowskim/CryptoSwift" == 0.2.3
+github "youtube/youtube-ios-player-helper" "master"

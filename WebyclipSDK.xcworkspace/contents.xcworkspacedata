@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:Carthage/Checkouts/youtube-ios-player-helper/youtube-ios-player-helper.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Carthage/Checkouts/CryptoSwift/CryptoSwift.xcodeproj">
    </FileRef>
    <FileRef
