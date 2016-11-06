@@ -6,7 +6,7 @@ class WebyclipCarouselCollectionViewCell: UICollectionViewCell {
     
     // MARK: - IBActions
     @IBAction func openPlayerHandler(sender: AnyObject) {
-        self.openPlayer!()
+        self.clickDelegate!()
     }
     
     // MARK: - Private
@@ -18,7 +18,7 @@ class WebyclipCarouselCollectionViewCell: UICollectionViewCell {
     // MARK: - Public
     var index: Int?
     var player: WebyclipPlayerController?
-    var openPlayer: (()->Void)?
+    var clickDelegate: (()->Void)?
 
     var media: WebyclipCarouselItem! {
         didSet {

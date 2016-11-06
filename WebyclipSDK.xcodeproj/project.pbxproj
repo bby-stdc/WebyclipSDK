@@ -32,7 +32,6 @@
 		B978400B1DCD2749008DA629 /* WebyclipPlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B978400A1DCD2749008DA629 /* WebyclipPlayerCollectionViewCell.swift */; };
 		B978400D1DCD2779008DA629 /* WebyclipPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B978400C1DCD2779008DA629 /* WebyclipPlayerItem.swift */; };
 		B978400F1DCD2941008DA629 /* WebyclipPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = B978400E1DCD2941008DA629 /* WebyclipPlayer.xib */; };
-		B97840111DCD5982008DA629 /* WebyclipPlayerCloseAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B97840101DCD5982008DA629 /* WebyclipPlayerCloseAnimator.swift */; };
 		B9C5BD841DCB1BA800B812AE /* WebyclipCarouselItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C5BD831DCB1BA800B812AE /* WebyclipCarouselItem.swift */; };
 		B9C5BD861DCB353400B812AE /* WebyclipCarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C5BD851DCB353400B812AE /* WebyclipCarouselCollectionViewCell.swift */; };
 		B9C5BD881DCB3E3100B812AE /* WebyclipCarousel.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9C5BD871DCB3E3100B812AE /* WebyclipCarousel.xib */; };
@@ -91,7 +90,6 @@
 		B978400A1DCD2749008DA629 /* WebyclipPlayerCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipPlayerCollectionViewCell.swift; sourceTree = "<group>"; };
 		B978400C1DCD2779008DA629 /* WebyclipPlayerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipPlayerItem.swift; sourceTree = "<group>"; };
 		B978400E1DCD2941008DA629 /* WebyclipPlayer.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebyclipPlayer.xib; sourceTree = "<group>"; };
-		B97840101DCD5982008DA629 /* WebyclipPlayerCloseAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipPlayerCloseAnimator.swift; sourceTree = "<group>"; };
 		B9C5BD831DCB1BA800B812AE /* WebyclipCarouselItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipCarouselItem.swift; sourceTree = "<group>"; };
 		B9C5BD851DCB353400B812AE /* WebyclipCarouselCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipCarouselCollectionViewCell.swift; sourceTree = "<group>"; };
 		B9C5BD871DCB3E3100B812AE /* WebyclipCarousel.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebyclipCarousel.xib; sourceTree = "<group>"; };
@@ -184,7 +182,6 @@
 		B9C5BD8B1DCB45A200B812AE /* WebyclipPlayer */ = {
 			isa = PBXGroup;
 			children = (
-				B97840101DCD5982008DA629 /* WebyclipPlayerCloseAnimator.swift */,
 				B9CD5AAE1DB7C5D9002B96E3 /* WebyclipPlayerController.swift */,
 				B978400A1DCD2749008DA629 /* WebyclipPlayerCollectionViewCell.swift */,
 				B978400E1DCD2941008DA629 /* WebyclipPlayer.xib */,
@@ -334,7 +331,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B97840111DCD5982008DA629 /* WebyclipPlayerCloseAnimator.swift in Sources */,
 				184032E01DAA895300196E48 /* WebyclipSDKManager.swift in Sources */,
 				184032DF1DAA895300196E48 /* WebyclipContextConfig.swift in Sources */,
 				184032D81DAA895300196E48 /* WebyclipCarouselController.swift in Sources */,

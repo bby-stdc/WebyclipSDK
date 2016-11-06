@@ -51,7 +51,6 @@ class ViewController: UIViewController, WebyclipCarouselProtocol, WebyclipPlayer
                 let playerConfig = WebyclipPlayerConfig()
                 self.playerController = self.session!.createPlayer(playerConfig, context: context)
                 self.playerController?.delegate = self
-                self.playerController?.initialIndex = 3
                 self.view.addSubview(self.playerController!.view)
             }, error: { error in
         })
@@ -60,7 +59,8 @@ class ViewController: UIViewController, WebyclipCarouselProtocol, WebyclipPlayer
     
     func didClick(media: WebyclipMedia) {
         print (media)
-        self.playerController!.play(media)
+        //self.playerController!.play(media)
+       // self.view.addSubview(self.playerController!.view)
     }
     
     func didPlayStart(media: WebyclipMedia) {
