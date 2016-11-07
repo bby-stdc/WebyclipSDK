@@ -26,6 +26,7 @@
 		184032FD1DAA8AB000196E48 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 184032FC1DAA8AB000196E48 /* SwiftyJSON.framework */; };
 		18956DAF1DAB5FA9008A7534 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18956DAE1DAB5FA9008A7534 /* Alamofire.framework */; };
 		18956DB51DAB67A5008A7534 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18956DB41DAB67A5008A7534 /* CryptoSwift.framework */; };
+		18D197A81DD06071004A1D88 /* readme.md in Sources */ = {isa = PBXBuildFile; fileRef = 18D197A71DD06071004A1D88 /* readme.md */; };
 		B94AF9951DC0B5FC00A681C0 /* YouTubeiOSPlayerHelper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B94AF9941DC0B5FC00A681C0 /* YouTubeiOSPlayerHelper.framework */; };
 		B94AF9971DC0B91B00A681C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B94AF9961DC0B91B00A681C0 /* Images.xcassets */; };
 		B97840091DCD2402008DA629 /* WebyclipPlayerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B97840081DCD2402008DA629 /* WebyclipPlayerCell.xib */; };
@@ -84,6 +85,7 @@
 		184032FC1DAA8AB000196E48 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		18956DAE1DAB5FA9008A7534 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		18956DB41DAB67A5008A7534 /* CryptoSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoSwift.framework; path = Carthage/Build/iOS/CryptoSwift.framework; sourceTree = "<group>"; };
+		18D197A71DD06071004A1D88 /* readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		B94AF9941DC0B5FC00A681C0 /* YouTubeiOSPlayerHelper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = YouTubeiOSPlayerHelper.framework; path = Carthage/Build/iOS/YouTubeiOSPlayerHelper.framework; sourceTree = "<group>"; };
 		B94AF9961DC0B91B00A681C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B97840081DCD2402008DA629 /* WebyclipPlayerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebyclipPlayerCell.xib; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		184032921DAA769500196E48 = {
 			isa = PBXGroup;
 			children = (
+				18D197A71DD06071004A1D88 /* readme.md */,
 				184032CB1DAA7EEB00196E48 /* Frameworks */,
 				1840329E1DAA769500196E48 /* WebyclipSDK */,
 				184032AA1DAA769500196E48 /* WebyclipSDKTests */,
@@ -346,6 +349,7 @@
 				B9C5BD861DCB353400B812AE /* WebyclipCarouselCollectionViewCell.swift in Sources */,
 				184032E31DAA895300196E48 /* WebyclipRelatedItem.swift in Sources */,
 				B978400D1DCD2779008DA629 /* WebyclipPlayerItem.swift in Sources */,
+				18D197A81DD06071004A1D88 /* readme.md in Sources */,
 				B9CD5AB01DB7C5D9002B96E3 /* WebyclipPlayerController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
