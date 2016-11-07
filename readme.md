@@ -9,21 +9,21 @@ Webyclip SDK uses [Carthage](https://github.com/Carthage/Carthage) for dependacy
 To add Webyclip SDK using Carthage:
 1. Create a `Cartfile` on your project root
 2. Add a line to the `Cartfile` with the Webyclip dependacy:
-```
-github "enbaya/WebyclipSDK"
-```
+    ```
+    github "enbaya/WebyclipSDK"
+    ```
 3. From your project root, run carthage to pull the dependacies:
-```sh
-carthage update --platform iOS --no-use-binaries
-```
+    ```sh
+    carthage update --platform iOS --no-use-binaries
+    ```
 4. Drag the following frameworks to your projects "Linked Frameworks and Libraries":
-```
-Carthage/Build/iOS/WebyclipSDK.framework
-Carthage/Build/iOS/YouTubeiOSPlayerHelper.framework
-Carthage/Build/iOS/SwiftyJSON.framework
-Carthage/Build/iOS/CryptoSwift.framework
-Carthage/Build/iOS/Alamofire.framework
-```
+    ```
+    Carthage/Build/iOS/WebyclipSDK.framework
+    Carthage/Build/iOS/YouTubeiOSPlayerHelper.framework
+    Carthage/Build/iOS/SwiftyJSON.framework
+    Carthage/Build/iOS/CryptoSwift.framework
+    Carthage/Build/iOS/Alamofire.framework
+    ```
 5. Add all these frameworks to your "copy framework" build phase
 
 ## Usage
