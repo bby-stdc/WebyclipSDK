@@ -17,8 +17,6 @@ class WebyclipCarouselItem {
             let image = UIImage(data: data)
             items?.append(WebyclipCarouselItem(mediaImage: image, title: media.title))
         }
-        // Add fake slide for correct sliding
-        items?.append(WebyclipCarouselItem(mediaImage: UIImage(), title: ""))
         
         return items!
     }

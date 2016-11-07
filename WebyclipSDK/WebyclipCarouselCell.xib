@@ -30,7 +30,7 @@
                             <action selector="openPlayerHandler:" destination="jC4-5y-lbK" eventType="touchDown" id="7RO-Ps-wGY"/>
                         </connections>
                     </button>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="playbutton" translatesAutoresizingMaskIntoConstraints="NO" id="fBL-IB-2BE">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playbutton" translatesAutoresizingMaskIntoConstraints="NO" id="fBL-IB-2BE">
                         <rect key="frame" x="114" y="53" width="52" height="52"/>
                     </imageView>
                 </subviews>

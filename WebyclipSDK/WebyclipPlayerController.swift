@@ -32,7 +32,7 @@ public class WebyclipPlayerController: UIViewController {
     private var session: WebyclipSession?
     private var context: WebyclipContext?
     private var cellHeight: CGFloat?
-    private var initialIndex: Int?
+    private var initialIndex: Int? = 0
     private var currentIndex: Int?
     private var medias: [WebyclipPlayerItem]?
     
