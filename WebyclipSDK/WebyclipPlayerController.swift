@@ -113,6 +113,11 @@ public class WebyclipPlayerController: UIViewController {
         self.player?.scrollToItemAtIndexPath(NSIndexPath(forItem: self.initialIndex!, inSection: 0), atScrollPosition: .Top, animated: false)
     }
     
+    /**
+     Open player frame
+     
+     - parameter WebyclipMedia?:    initial media object `WebyclipMedia` for showing. Pass nil for starting from the beginning
+     */
     public func openPlayer(media: WebyclipMedia?) {
         print("PLAY")
         if media == nil {
