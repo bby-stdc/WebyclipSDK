@@ -33,6 +33,7 @@ public class WebyclipPlayerController: UIViewController {
     private var context: WebyclipContext?
     private var cellHeight: CGFloat?
     private var initialIndex: Int?
+    private var currentIndex: Int?
     private var medias: [WebyclipPlayerItem]?
     
     private struct View {
@@ -45,6 +46,13 @@ public class WebyclipPlayerController: UIViewController {
     
     private func closeView() {
         UIApplication.sharedApplication().statusBarStyle = .Default
+        let cells = self.player?.visibleCells() as! [WebyclipPlayerCollectionViewCell]
+        let idx = cells.indexOf({$0.media.mediaId == self.medias![self.currentIndex!].mediaId})
+        if idx != nil {
+            cells[idx!].mediaPlayer.alpha = 0.15
+            cells[idx!].mediaPlayer.stopVideo()
+        }
+        
         self.view.removeFromSuperview()
     }
     
@@ -79,7 +87,7 @@ public class WebyclipPlayerController: UIViewController {
     override public func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
-    
+       
     override public func viewDidLoad() {
         super.viewDidLoad()
         
@@ -91,10 +99,16 @@ public class WebyclipPlayerController: UIViewController {
         self.uiView.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
     }
     
-    
     public override func viewDidAppear(animated: Bool) {
         self.counter.text = String(self.initialIndex! + 1) + " of " + String(self.medias!.count)
+        self.currentIndex = self.initialIndex
         self.player?.scrollToItemAtIndexPath(NSIndexPath(forItem: self.initialIndex!, inSection: 0), atScrollPosition: .Top, animated: false)
+        let cells = self.player?.visibleCells() as! [WebyclipPlayerCollectionViewCell]
+        let idx = cells.indexOf({$0.media.mediaId == self.medias![self.currentIndex!].mediaId})
+        if idx != nil {
+            cells[idx!].mediaPlayer.alpha = 1
+            cells[idx!].mediaPlayer.playVideo()
+        }
     }
     
     public func play(media: WebyclipMedia) {
@@ -166,12 +180,21 @@ extension WebyclipPlayerController: UIScrollViewDelegate {
         let intIndex = Int(roundedIndex)
         
         self.counter.text = String(intIndex + 1) + " of " + String(self.medias!.count)
+        self.currentIndex = intIndex
+        
         if let cell = self.player?.cellForItemAtIndexPath(NSIndexPath(forItem: intIndex, inSection: 0)) {
             let wcCell = cell as! WebyclipPlayerCollectionViewCell
+            wcCell.mediaPlayer.alpha = 1
             wcCell.mediaPlayer.playVideo()
         }
         
         offset = CGPoint(x: scrollView.contentInset.left, y: roundedIndex * self.cellHeight!)
         targetContentOffset.memory = offset
+    }
+    
+    public func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+        for view in self.player.visibleCells() as! [WebyclipPlayerCollectionViewCell] {
+            view.mediaPlayer.alpha = 0.15
+        }
     }
 }

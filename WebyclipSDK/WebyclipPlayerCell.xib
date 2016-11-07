@@ -15,7 +15,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRU-Tp-QxD" customClass="YTPlayerView">
+                    <view alpha="0.14999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRU-Tp-QxD" customClass="YTPlayerView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="337.5"/>
                         <color key="backgroundColor" red="1" green="0.10794325890000001" blue="0.14358478059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
