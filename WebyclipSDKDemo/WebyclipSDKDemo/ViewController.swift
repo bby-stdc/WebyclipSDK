@@ -10,7 +10,7 @@ class ViewController: UIViewController, WebyclipCarouselProtocol, WebyclipPlayer
     var carouselController : WebyclipCarouselController?
     
     @IBAction func openPlayerHandler(sender: AnyObject) {
-        self.view.addSubview(self.playerController!.view)
+        self.playerController!.openPlayer(nil)
     }
     
     override func viewDidLoad() {
@@ -37,7 +37,7 @@ class ViewController: UIViewController, WebyclipCarouselProtocol, WebyclipPlayer
     }
     
     func didClick(media: WebyclipMedia) {
-        print (media)
+        print("I've just clicked on carousel thumbnail!")
     }
     
     func didPlayStart(media: WebyclipMedia) {

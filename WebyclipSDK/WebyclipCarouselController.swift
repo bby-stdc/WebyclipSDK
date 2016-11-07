@@ -87,10 +87,7 @@ extension WebyclipCarouselController: UICollectionViewDataSource {
         cell.clickDelegate = {
             let media = self.context!.items[indexPath.item]
             self.delegate?.didClick(media)
-            self.playerController!.play(media)
-            
-            let window = UIApplication.sharedApplication().keyWindow
-            window!.addSubview(self.playerController!.view)
+            self.playerController!.openPlayer(media)
         }
         
         return cell
@@ -108,6 +105,7 @@ extension WebyclipCarouselController: UIScrollViewDelegate {
         let roundedIndex =  round(index)
         
         offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing, y: 0)
+
         targetContentOffset.memory = offset
     }
 }

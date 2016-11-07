@@ -71,7 +71,7 @@
 		184032AD1DAA769500196E48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		184032C71DAA7E7B00196E48 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		184032C91DAA7E8200196E48 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
-		184032CC1DAA895300196E48 /* WebyclipCarouselController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipCarouselController.swift; sourceTree = "<group>"; };
+		184032CC1DAA895300196E48 /* WebyclipCarouselController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipCarouselController.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		184032CE1DAA895300196E48 /* WebyclipSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipSession.swift; sourceTree = "<group>"; };
 		184032CF1DAA895300196E48 /* WebyclipMedia.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipMedia.swift; sourceTree = "<group>"; };
 		184032D01DAA895300196E48 /* WebyclipPlayerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipPlayerConfig.swift; sourceTree = "<group>"; };

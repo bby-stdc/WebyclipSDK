@@ -17,7 +17,6 @@ class WebyclipPlayerCollectionViewCell: UICollectionViewCell {
         "fs": 0,
         "theme": "light",
         "color": "white"
-        
     ]
     
     private func updateUI() {

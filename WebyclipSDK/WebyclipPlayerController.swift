@@ -33,7 +33,7 @@ public class WebyclipPlayerController: UIViewController {
     private var context: WebyclipContext?
     private var cellHeight: CGFloat?
     private var initialIndex: Int? = 0
-    private var currentIndex: Int?
+    private var currentIndex: Int? = 0
     private var medias: [WebyclipPlayerItem]?
     
     private struct View {
@@ -46,13 +46,12 @@ public class WebyclipPlayerController: UIViewController {
     
     private func closeView() {
         UIApplication.sharedApplication().statusBarStyle = .Default
-        let cells = self.player?.visibleCells() as! [WebyclipPlayerCollectionViewCell]
-        let idx = cells.indexOf({$0.media.mediaId == self.medias![self.currentIndex!].mediaId})
-        if idx != nil {
-            cells[idx!].mediaPlayer.alpha = 0.15
-            cells[idx!].mediaPlayer.stopVideo()
-        }
+        let cell = getActiveCell()
+        cell.mediaPlayer.alpha = 0.15
+        cell.mediaPlayer.stopVideo()
         
+        self.initialIndex = 0
+        self.currentIndex = 0
         self.view.removeFromSuperview()
     }
     
@@ -62,6 +61,15 @@ public class WebyclipPlayerController: UIViewController {
         let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
         
         return view
+    }
+    
+    private func getActiveCell() -> WebyclipPlayerCollectionViewCell {
+        let cells = self.player?.visibleCells() as! [WebyclipPlayerCollectionViewCell]
+        let idx = cells.indexOf({
+            $0.media.mediaId == self.medias![self.currentIndex!].mediaId
+        })
+        
+        return cells[idx!]
     }
     
     // MARK: - Public
@@ -103,16 +111,21 @@ public class WebyclipPlayerController: UIViewController {
         self.counter.text = String(self.initialIndex! + 1) + " of " + String(self.medias!.count)
         self.currentIndex = self.initialIndex
         self.player?.scrollToItemAtIndexPath(NSIndexPath(forItem: self.initialIndex!, inSection: 0), atScrollPosition: .Top, animated: false)
-        let cells = self.player?.visibleCells() as! [WebyclipPlayerCollectionViewCell]
-        let idx = cells.indexOf({$0.media.mediaId == self.medias![self.currentIndex!].mediaId})
-        if idx != nil {
-            cells[idx!].mediaPlayer.alpha = 1
-            cells[idx!].mediaPlayer.playVideo()
-        }
     }
     
-    public func play(media: WebyclipMedia) {
-        self.initialIndex = self.context!.items.indexOf({$0.mediaId == media.mediaId})
+    public func openPlayer(media: WebyclipMedia?) {
+        print("PLAY")
+        if media == nil {
+            self.initialIndex = 0
+        }
+        else {
+            self.initialIndex = self.context!.items.indexOf({
+                $0.mediaId == media!.mediaId
+            })
+        }
+        
+        let window = UIApplication.sharedApplication().keyWindow
+        window!.addSubview(self.view)
     }
 }
 
@@ -121,24 +134,24 @@ extension WebyclipPlayerController: YTPlayerViewDelegate {
     public func playerView(playerView: YTPlayerView!, didChangeToState state: YTPlayerState) {
         switch(state) {
         case YTPlayerState.Buffering:
-            print("buffering")
             break
         case YTPlayerState.Unstarted:
-            print("Unstarted")
             break
         case YTPlayerState.Queued:
-            print("Ready to play")
             break
         case YTPlayerState.Playing:
-            print("Video playing")
             break
         case YTPlayerState.Paused:
-            print("Video paused")
             break
         default:
             break
         }
-        
+    }
+    
+    public func playerViewDidBecomeReady(playerView: YTPlayerView) {
+        let cell = getActiveCell()
+        cell.mediaPlayer.alpha = 1
+        cell.mediaPlayer.playVideo()
     }
 }
 
