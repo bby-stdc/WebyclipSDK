@@ -12,8 +12,6 @@ Pod::Spec.new do |spec|
   spec.source_files = "WebyclipSDK/**/*.{h,swift,m}"
   spec.resources = "WebyclipSDK/**/*.{xib,xcassets,bundle}"
 
-  spec.module_name = 'Reachability'
-
   spec.dependency "SwiftyJSON"
   spec.dependency "Alamofire"
   spec.dependency "CryptoSwift"
