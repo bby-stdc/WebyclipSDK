@@ -8,7 +8,7 @@ Pod::Spec.new do |spec|
 
   spec.platform = :ios, "9.0"
   spec.requires_arc = true
-  spec.source = { git: "https://github.com/enbaya/WebyclipSDK.git", tag: "v0.3.5", submodules: true }
+  spec.source = { git: "https://github.com/enbaya/WebyclipSDK.git", tag: "0.3.5", submodules: true }
   spec.source_files = "WebyclipSDK/**/*.{h,swift,m}"
   spec.resources = "WebyclipSDK/**/*.{xib,xcassets,bundle}"
 
