@@ -11,6 +11,9 @@ open class WebyclipPlayerController: UIViewController {
     @IBOutlet var counter: UILabel!
     @IBOutlet var player: UICollectionView!
     @IBOutlet var disclaimer: UIView!
+    @IBOutlet var playerTopConstraint: NSLayoutConstraint!
+    @IBOutlet var disclaimerButton: UIButton!
+    @IBOutlet var disclaimerImage: UIImageView!
     
     // MARK: - IBActions
     @IBAction func closeButtonHandler(_ sender: AnyObject) {
@@ -74,6 +77,23 @@ open class WebyclipPlayerController: UIViewController {
         return cells[idx!]
     }
     
+    func rotationHandler() {
+        let cell = getActiveCell()
+        cell.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        if UIDevice.current.orientation.isLandscape {
+            self.closeButton.isHidden = true
+            self.playerTopConstraint.constant = 0
+            self.disclaimerButton.isHidden = true
+            self.disclaimerImage.isHidden = true
+        }
+        else {
+            self.closeButton.isHidden = false
+            self.playerTopConstraint.constant = 72
+            self.disclaimerButton.isHidden = false
+            self.disclaimerImage.isHidden = false
+        }
+    }
+    
     // MARK: - Public
     
     /// Delegate for getting callbacks
@@ -94,10 +114,14 @@ open class WebyclipPlayerController: UIViewController {
         super.init(coder: aDecoder)
     }
     
-    override open var preferredStatusBarStyle : UIStatusBarStyle {
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-       
+    
+    open override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
     override open func viewDidLoad() {
         super.viewDidLoad()
         
@@ -107,6 +131,10 @@ open class WebyclipPlayerController: UIViewController {
         self.player.register(UINib(nibName: "WebyclipPlayerCell", bundle: Bundle(for: type(of: self))), forCellWithReuseIdentifier: View.CellIdentifier)
         
         self.uiView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(WebyclipPlayerController.rotationHandler), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        
+        self.setNeedsStatusBarAppearanceUpdate()
     }
     
     open override func viewDidAppear(_ animated: Bool) {
@@ -118,6 +146,10 @@ open class WebyclipPlayerController: UIViewController {
         self.counter.text = String(self.initialIndex! + 1) + " of " + String(self.medias!.count)
         self.currentIndex = self.initialIndex
         self.player?.scrollToItem(at: IndexPath(item: self.initialIndex!, section: 0), at: .top, animated: false)
+    }
+    
+    open override var shouldAutorotate: Bool {
+        return true
     }
     
     /**
@@ -143,7 +175,7 @@ open class WebyclipPlayerController: UIViewController {
 
 // MARK: - YTPlayerViewDelegate
 extension WebyclipPlayerController: YTPlayerViewDelegate {
-    public func playerView(_ playerView: YTPlayerView!, didChangeTo state: YTPlayerState) {
+    public func playerView(_ playerView: YTPlayerView, didChangeTo state: YTPlayerState) {
         switch(state) {
         case YTPlayerState.buffering:
             break
@@ -198,7 +230,6 @@ extension WebyclipPlayerController: UICollectionViewDelegateFlowLayout {
 // MARK: - UICollectionViewDelegate
 extension WebyclipPlayerController: UIScrollViewDelegate {
     public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
-        let layout = self.player?.collectionViewLayout as! UICollectionViewFlowLayout
         var offset = targetContentOffset.pointee
         let index = (offset.y + scrollView.contentInset.top)  / self.cellHeight!
         let roundedIndex =  round(index)
