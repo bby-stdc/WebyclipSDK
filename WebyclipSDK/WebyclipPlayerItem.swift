@@ -18,9 +18,6 @@ class WebyclipPlayerItem {
     static func createCarouselItems(_ medias: [WebyclipMedia]) -> [WebyclipPlayerItem] {
         var items: [WebyclipPlayerItem] = []
         for media in medias {
-            let url = URL(string: "https://img.youtube.com/vi/" + media.mediaId + "/mqdefault.jpg")!
-            let data = try! Data(contentsOf: url)
-            let image = UIImage(data: data)
             items.append(WebyclipPlayerItem(mediaId: media.mediaId, title: media.title, author: media.author, publishDate: media.publishDate as Date, provider: media.providerName))
         }
         
