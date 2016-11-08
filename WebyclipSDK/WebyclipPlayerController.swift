@@ -1,6 +1,3 @@
-import UIKit
-import SwiftyJSON
-import WebKit
 import YouTubeiOSPlayerHelper
 
 /**
@@ -52,7 +49,12 @@ open class WebyclipPlayerController: UIViewController {
         
         self.initialIndex = 0
         self.currentIndex = 0
-        self.view.removeFromSuperview()
+        
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+            self.uiView.frame = CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: self.view.frame.height)
+        }, completion: {(value: Bool) in
+            self.view.removeFromSuperview()
+        })
     }
     
     fileprivate func loadViewFromNib() -> UIView {
@@ -108,6 +110,11 @@ open class WebyclipPlayerController: UIViewController {
     }
     
     open override func viewDidAppear(_ animated: Bool) {
+        self.uiView.frame = CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: self.view.frame.height)
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
+            self.uiView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        }, completion: nil)
+        
         self.counter.text = String(self.initialIndex! + 1) + " of " + String(self.medias!.count)
         self.currentIndex = self.initialIndex
         self.player?.scrollToItem(at: IndexPath(item: self.initialIndex!, section: 0), at: .top, animated: false)
