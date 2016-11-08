@@ -9,8 +9,8 @@ Pod::Spec.new do |spec|
   spec.platform = :ios, "9.1"
   spec.requires_arc = true
   spec.source = { git: "https://github.com/enbaya/WebyclipSDK.git", tag: "v#{spec.version}", submodules: true }
-  spec.source_files = "WebyclipSDK/**/*.{h,swift}"
-  spec.resources = "WebyclipSDK/**/*.{xib,xcassets}"
+  spec.source_files = "WebyclipSDK/**/*.{h,swift,m}"
+  spec.resources = "WebyclipSDK/**/*.{xib,xcassets,bundle}"
 
   spec.module_name = 'Reachability'
 
