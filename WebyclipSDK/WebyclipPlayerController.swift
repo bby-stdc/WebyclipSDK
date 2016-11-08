@@ -188,6 +188,7 @@ extension WebyclipPlayerController: YTPlayerViewDelegate {
     
     public func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
         let cell = getActiveCell()
+        cell.mediaPlayer.isUserInteractionEnabled = true
         cell.mediaPlayer.alpha = 1
         cell.mediaPlayer.playVideo()
     }
@@ -234,6 +235,7 @@ extension WebyclipPlayerController: UIScrollViewDelegate {
         
         if let cell = self.player?.cellForItem(at: IndexPath(item: intIndex, section: 0)) {
             let wcCell = cell as! WebyclipPlayerCollectionViewCell
+            wcCell.mediaPlayer.isUserInteractionEnabled = true
             wcCell.mediaPlayer.alpha = 1
             wcCell.mediaPlayer.playVideo()
         }
@@ -244,6 +246,7 @@ extension WebyclipPlayerController: UIScrollViewDelegate {
     
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         for view in self.player.visibleCells as! [WebyclipPlayerCollectionViewCell] {
+            view.mediaPlayer.isUserInteractionEnabled = false
             view.mediaPlayer.alpha = 0.15
         }
     }

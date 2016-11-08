@@ -9,7 +9,7 @@ class WebyclipPlayerCollectionViewCell: UICollectionViewCell {
     @IBOutlet var mediaAuthor: UILabel!
     @IBOutlet var mediaProvider: UILabel!
     
-     // MARK: - Private
+    // MARK: - Private
     fileprivate var playerVars = [
         "playsinline": 1,
         "showinfo": 0,
@@ -21,6 +21,7 @@ class WebyclipPlayerCollectionViewCell: UICollectionViewCell {
     ] as [String : Any]
     
     fileprivate func updateUI() {
+        self.mediaPlayer.isUserInteractionEnabled = false
         self.mediaPlayer.load(withVideoId: self.media.mediaId, playerVars: self.playerVars)
         self.mediaTitle.text = self.media.title
         self.mediaAuthor.text = self.media.author
