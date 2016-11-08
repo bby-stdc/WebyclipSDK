@@ -5,19 +5,19 @@ import Foundation
 /**
  Represents a media object in Webyclip context.
 */
-public class WebyclipMedia {
+open class WebyclipMedia {
     /// The name of the media provider
-    public var providerName: String!
+    open var providerName: String!
     /// The id of the media
-    public var mediaId: String!
+    open var mediaId: String!
     /// The media title
-    public var title: String!
+    open var title: String!
     /// The media author
-    public var author: String!
+    open var author: String!
     /// The media publish date
-    public var publishDate: NSDate!
+    open var publishDate: Date!
     /// A list of related items associated with the media
-    public var relatedItems: [WebyclipRelatedItem] = []
+    open var relatedItems: [WebyclipRelatedItem] = []
     
-    public var duration: Int!
+    open var duration: Int!
 }

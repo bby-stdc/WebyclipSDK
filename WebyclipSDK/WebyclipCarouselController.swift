@@ -5,27 +5,27 @@ import WebKit
 /**
  Controller object of the Webyclip thumbnails carousel
 */
-public class WebyclipCarouselController: UIViewController {
+open class WebyclipCarouselController: UIViewController {
 
     // MARK: - IBOutlets
     @IBOutlet var uiView: UIView!
     @IBOutlet var carousel: UICollectionView!
     
     // MARK: - Private
-    private var session: WebyclipSession?
-    private var context: WebyclipContext?
-    private var playerController: WebyclipPlayerController?
-    private var medias: [WebyclipCarouselItem]?
-    private var cellWidth: CGFloat?
+    fileprivate var session: WebyclipSession?
+    fileprivate var context: WebyclipContext?
+    fileprivate var playerController: WebyclipPlayerController?
+    fileprivate var medias: [WebyclipCarouselItem]?
+    fileprivate var cellWidth: CGFloat?
     
-    private struct View {
+    fileprivate struct View {
         static let CellIdentifier = "WebyClip Carousel Cell"
     }
     
-    private func loadViewFromNib() -> UIView {
-        let bundle = NSBundle(forClass: self.dynamicType)
+    fileprivate func loadViewFromNib() -> UIView {
+        let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName: "WebyclipCarousel", bundle: bundle)
-        let view = nib.instantiateWithOwner(self, options: nil)[0] as! UIView
+        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         
         return view
     }
@@ -33,7 +33,7 @@ public class WebyclipCarouselController: UIViewController {
     // MARK: - Public
     
     /// Delegate for getting callbacks
-    public var delegate: WebyclipCarouselProtocol?
+    open var delegate: WebyclipCarouselProtocol?
 
     /**
      Initializes WebyclipCarouselController with `WebyclipSession` and `WebyclipContext`
@@ -51,37 +51,37 @@ public class WebyclipCarouselController: UIViewController {
         super.init(coder: aDecoder)
     }
     
-    public override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         
         let view = loadViewFromNib()
         self.view.addSubview(view)
-        self.carousel.registerNib(UINib(nibName: "WebyclipCarouselCell", bundle: NSBundle(forClass: self.dynamicType)), forCellWithReuseIdentifier: View.CellIdentifier)
+        self.carousel.register(UINib(nibName: "WebyclipCarouselCell", bundle: Bundle(for: type(of: self))), forCellWithReuseIdentifier: View.CellIdentifier)
         
-        self.uiView.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height)
+        self.uiView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
     }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
 extension WebyclipCarouselController: UICollectionViewDelegateFlowLayout {
-    public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         self.cellWidth = self.view.frame.width / 1.5
-        return CGSizeMake(cellWidth!, collectionView.bounds.size.height)
+        return CGSize(width: cellWidth!, height: collectionView.bounds.size.height)
     }
 }
 
 // MARK: - UICollectionViewDataSource
 extension WebyclipCarouselController: UICollectionViewDataSource {
-    public func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    public func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
-    public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.medias!.count
     }
     
-    public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(View.CellIdentifier, forIndexPath: indexPath) as! WebyclipCarouselCollectionViewCell
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: View.CellIdentifier, for: indexPath) as! WebyclipCarouselCollectionViewCell
         
         cell.media = self.medias![indexPath.item]
         cell.clickDelegate = {
@@ -96,17 +96,17 @@ extension WebyclipCarouselController: UICollectionViewDataSource {
 
 // MARK: - UICollectionViewDelegate
 extension WebyclipCarouselController: UIScrollViewDelegate {
-    public func scrollViewWillEndDragging(scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
+    public func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         let layout = self.carousel?.collectionViewLayout as! UICollectionViewFlowLayout
         let cellWidthIncludingSpacing = self.cellWidth! + layout.minimumLineSpacing
         
-        var offset = targetContentOffset.memory
+        var offset = targetContentOffset.pointee
         let index = offset.x / self.cellWidth!
         let roundedIndex =  round(index)
         
         offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing, y: 0)
 
-        targetContentOffset.memory = offset
+        targetContentOffset.pointee = offset
     }
 }
  

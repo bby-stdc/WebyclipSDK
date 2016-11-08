@@ -4,11 +4,11 @@ import UIKit
 /**
     Webyclip base entry point for the API
  */
-public class WebyclipSDKManager {
+open class WebyclipSDKManager {
     /**
      Shared instance of `WebyclipSDKManager`
     */
-    public static var sharedManager: WebyclipSDKManager = {
+    open static var sharedManager: WebyclipSDKManager = {
         return WebyclipSDKManager()
     }()
     
@@ -23,7 +23,7 @@ public class WebyclipSDKManager {
      
      - returns: A new `WebyclipSession`
     */
-    public func createSession(siteId: String) -> WebyclipSession {
+    open func createSession(_ siteId: String) -> WebyclipSession {
        return WebyclipSession(siteId: siteId)
     }
     

@@ -5,14 +5,14 @@ class WebyclipCarouselCollectionViewCell: UICollectionViewCell {
     @IBOutlet var mediaTitle: UILabel!
     
     // MARK: - IBActions
-    @IBAction func openPlayerHandler(sender: AnyObject) {
+    @IBAction func openPlayerHandler(_ sender: AnyObject) {
         self.clickDelegate!()
     }
     
     // MARK: - Private
-    private func updateUI() {
+    fileprivate func updateUI() {
         mediaTitle?.text! = media.title
-        mediaThumbnail?.setBackgroundImage(media.mediaImage, forState: .Normal)
+        mediaThumbnail?.setBackgroundImage(media.mediaImage, for: UIControlState())
     }
     
     // MARK: - Public

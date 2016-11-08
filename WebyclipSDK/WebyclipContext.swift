@@ -4,9 +4,9 @@ import Foundation
 /**
  Represents a content on the view you like to get matching videos for
 */
-public class WebyclipContext {
+open class WebyclipContext {
     
-    public var items: [WebyclipMedia] = []
+    open var items: [WebyclipMedia] = []
     
     public init(items: [WebyclipMedia]) {
         self.items = items
@@ -17,7 +17,7 @@ public class WebyclipContext {
      
      - returns: true if the context has media
      */
-    public func hasMedia() -> Bool {
+    open func hasMedia() -> Bool {
         return self.items.count > 0
     }
     

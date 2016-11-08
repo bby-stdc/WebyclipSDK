@@ -4,12 +4,12 @@ import Foundation
 /**
  The configuration of `WebyclipContext`
 */
-public class WebyclipContextConfig {
+open class WebyclipContextConfig {
 
     /**
      The explicit ID for this context. If not set, the contextId is generated automatically from the context tag values.
      */
-    public var id: String
+    open var id: String
     
     /**
      The type of content this context matches to. Each context type has a different set of supported <b>tags</b>. The Available types are:
@@ -17,7 +17,7 @@ public class WebyclipContextConfig {
       1. "pdp" - Product Details Page.
       2. "ctp" - Category Page.
      */
-    public var type: String = "pdp"
+    open var type: String = "pdp"
 
     
     /**
@@ -41,17 +41,17 @@ public class WebyclipContextConfig {
      4. <b>category_4</b> - (optional) The forth level category level
      5. <b>category_5</b> - (optional) The fifth level category level
      */
-    public var tags: [String:String] = [:]
+    open var tags: [String:String] = [:]
     
     /**
      Array of image urls
      */
-    public var images: [String]?
+    open var images: [String]?
 
     /**
      An unique id for the current instance. Use this to allow customization of the shown data per instance.
      */
-    public var instanceId: String?
+    open var instanceId: String?
     
     
     

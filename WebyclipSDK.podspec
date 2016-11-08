@@ -6,13 +6,13 @@ Pod::Spec.new do |spec|
   spec.license = { type: 'MIT', file: 'LICENSE' }
   spec.authors = { "Webyclip" => 'info@webyclip.com' }
 
-  spec.platform = :ios, "8.0"
+  spec.platform = :ios, "9.1"
   spec.requires_arc = true
   spec.source = { git: "https://github.com/enbaya/WebyclipSDK.git", tag: "v#{spec.version}", submodules: true }
   spec.source_files = "WebyclipSDK/**/*.{h,swift}"
 
-  spec.dependency "SwiftyJSON", "~> 2.4.0"
-  spec.dependency "Alamofire", "~> 3.0"
-  spec.dependency "CryptoSwift", "~> 0.2.3"
+  spec.dependency "SwiftyJSON"
+  spec.dependency "Alamofire"
+  spec.dependency "CryptoSwift"
   spec.dependency "youtube-ios-player-helper", "~> 0.1.4"
 end

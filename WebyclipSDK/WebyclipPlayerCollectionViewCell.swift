@@ -9,7 +9,7 @@ class WebyclipPlayerCollectionViewCell: UICollectionViewCell {
     @IBOutlet var mediaProvider: UILabel!
     
      // MARK: - Private
-    private var playerVars = [
+    fileprivate var playerVars = [
         "playsinline": 1,
         "showinfo": 0,
         "modestbranding": 1,
@@ -17,16 +17,16 @@ class WebyclipPlayerCollectionViewCell: UICollectionViewCell {
         "fs": 0,
         "theme": "light",
         "color": "white"
-    ]
+    ] as [String : Any]
     
-    private func updateUI() {
-        self.mediaPlayer.loadWithVideoId(self.media.mediaId, playerVars: self.playerVars)
+    fileprivate func updateUI() {
+        self.mediaPlayer.load(withVideoId: self.media.mediaId, playerVars: self.playerVars)
         self.mediaTitle.text = self.media.title
         self.mediaAuthor.text = self.media.author
         self.mediaProvider.text = formatProvider(self.media.provider)
     }
     
-    private func formatProvider(provider: String) -> String {
+    fileprivate func formatProvider(_ provider: String) -> String {
         let prv: String
         switch(provider) {
             case "youtube":
@@ -39,9 +39,9 @@ class WebyclipPlayerCollectionViewCell: UICollectionViewCell {
         return prv;
     }
     
-    private func getMediaThumbnail(mediaId: String) -> UIImage {
-        let url = NSURL(string: "https://img.youtube.com/vi/" + mediaId + "/mqdefault.jpg")!
-        let data = NSData(contentsOfURL: url)!
+    fileprivate func getMediaThumbnail(_ mediaId: String) -> UIImage {
+        let url = URL(string: "https://img.youtube.com/vi/" + mediaId + "/mqdefault.jpg")!
+        let data = try! Data(contentsOf: url)
         return UIImage(data: data)!
     }
 

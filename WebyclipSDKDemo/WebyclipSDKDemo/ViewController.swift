@@ -9,7 +9,7 @@ class ViewController: UIViewController, WebyclipCarouselProtocol, WebyclipPlayer
     var playerController : WebyclipPlayerController?
     var carouselController : WebyclipCarouselController?
     
-    @IBAction func openPlayerHandler(sender: AnyObject) {
+    @IBAction func openPlayerHandler(_ sender: AnyObject) {
         self.playerController!.openPlayer(nil)
     }
     
@@ -36,23 +36,23 @@ class ViewController: UIViewController, WebyclipCarouselProtocol, WebyclipPlayer
         })
     }
     
-    func didClick(media: WebyclipMedia) {
+    func didClick(_ media: WebyclipMedia) {
         print("I've just clicked on carousel thumbnail!")
     }
     
-    func didPlayStart(media: WebyclipMedia) {
+    func didPlayStart(_ media: WebyclipMedia) {
         print(media)
     }
     
-    func didPlayEnd(media: WebyclipMedia, durationSeconds: Int) {
+    func didPlayEnd(_ media: WebyclipMedia, durationSeconds: Int) {
         print (durationSeconds)
     }
     
-    func didRelatedItemClick(media: WebyclipMedia, relatedItem: WebyclipRelatedItem) {
+    func didRelatedItemClick(_ media: WebyclipMedia, relatedItem: WebyclipRelatedItem) {
         
     }
     
-    func didSocialShare(media: WebyclipMedia, socialNetwork: String) {
+    func didSocialShare(_ media: WebyclipMedia, socialNetwork: String) {
         print (socialNetwork)
     }
 }

@@ -7,7 +7,7 @@ class WebyclipPlayerItem {
     var publishDate: String
     var provider: String
     
-    init(mediaId: String, title: String, author: String, publishDate: NSDate, provider: String) {
+    init(mediaId: String, title: String, author: String, publishDate: Date, provider: String) {
         self.mediaId = mediaId
         self.title = title
         self.author = "Submitted by " + author
@@ -15,30 +15,30 @@ class WebyclipPlayerItem {
         self.provider = provider
     }
     
-    static func createCarouselItems(medias: [WebyclipMedia]) -> [WebyclipPlayerItem] {
+    static func createCarouselItems(_ medias: [WebyclipMedia]) -> [WebyclipPlayerItem] {
         var items: [WebyclipPlayerItem] = []
-        for media in medias as! [WebyclipMedia] {
-            let url = NSURL(string: "https://img.youtube.com/vi/" + media.mediaId + "/mqdefault.jpg")!
-            let data = NSData(contentsOfURL: url)!
+        for media in medias {
+            let url = URL(string: "https://img.youtube.com/vi/" + media.mediaId + "/mqdefault.jpg")!
+            let data = try! Data(contentsOf: url)
             let image = UIImage(data: data)
-            items.append(WebyclipPlayerItem(mediaId: media.mediaId, title: media.title, author: media.author, publishDate: media.publishDate, provider: media.providerName))
+            items.append(WebyclipPlayerItem(mediaId: media.mediaId, title: media.title, author: media.author, publishDate: media.publishDate as Date, provider: media.providerName))
         }
         
         return items
     }
 
     //MARK: - Private
-    private class func formatDate(date: NSDate) -> String {
-        let formatter = NSDateFormatter()
+    fileprivate class func formatDate(_ date: Date) -> String {
+        let formatter = DateFormatter()
         
         formatter.dateFormat = "MMMM"
-        let month = formatter.stringFromDate(date)
+        let month = formatter.string(from: date)
         
         formatter.dateFormat = "yyyy"
-        let year = formatter.stringFromDate(date)
+        let year = formatter.string(from: date)
         
         formatter.dateFormat = "d"
-        var day = formatter.stringFromDate(date)
+        var day = formatter.string(from: date)
         
         switch(day) {
             case "1":

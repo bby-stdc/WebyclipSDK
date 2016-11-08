@@ -12,5 +12,5 @@ public protocol WebyclipCarouselProtocol {
      
      - parameter media: The media that is clicked on `WebyclipMedia`
      */
-    func didClick(media: WebyclipMedia)
+    func didClick(_ media: WebyclipMedia)
 }
