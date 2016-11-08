@@ -1,5 +1,4 @@
-import YouTubeiOSPlayerHelper
-//import youtube_ios_player_helper
+
 
 class WebyclipPlayerCollectionViewCell: UICollectionViewCell {
     
@@ -41,6 +40,7 @@ class WebyclipPlayerCollectionViewCell: UICollectionViewCell {
     }
     
     fileprivate func getMediaThumbnail(_ mediaId: String) -> UIImage {
+        
         let url = URL(string: "https://img.youtube.com/vi/" + mediaId + "/mqdefault.jpg")!
         let data = try! Data(contentsOf: url)
         return UIImage(data: data)!

@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		1810B02F1DD1C5BD00AD360E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1810B02E1DD1C5BD00AD360E /* Alamofire.framework */; };
 		1810B05D1DD2012B00AD360E /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1810B05B1DD2012B00AD360E /* Assets.bundle */; };
-		1810B05E1DD2012B00AD360E /* YouTubeiOSPlayerHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 1810B05C1DD2012B00AD360E /* YouTubeiOSPlayerHelper.h */; };
-		1810B0611DD2014200AD360E /* YTPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1810B05F1DD2014200AD360E /* YTPlayerView.h */; };
+		1810B0611DD2014200AD360E /* YTPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1810B05F1DD2014200AD360E /* YTPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1810B0621DD2014200AD360E /* YTPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1810B0601DD2014200AD360E /* YTPlayerView.m */; };
 		184032A01DAA769500196E48 /* WebyclipSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 1840329F1DAA769500196E48 /* WebyclipSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		184032A71DAA769500196E48 /* WebyclipSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1840329C1DAA769500196E48 /* WebyclipSDK.framework */; };
@@ -68,7 +67,6 @@
 /* Begin PBXFileReference section */
 		1810B02E1DD1C5BD00AD360E /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		1810B05B1DD2012B00AD360E /* Assets.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Assets.bundle; sourceTree = "<group>"; };
-		1810B05C1DD2012B00AD360E /* YouTubeiOSPlayerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YouTubeiOSPlayerHelper.h; sourceTree = "<group>"; };
 		1810B05F1DD2014200AD360E /* YTPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YTPlayerView.h; sourceTree = "<group>"; };
 		1810B0601DD2014200AD360E /* YTPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YTPlayerView.m; sourceTree = "<group>"; };
 		1840329C1DAA769500196E48 /* WebyclipSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebyclipSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,7 +133,6 @@
 				1810B05F1DD2014200AD360E /* YTPlayerView.h */,
 				1810B0601DD2014200AD360E /* YTPlayerView.m */,
 				1810B05B1DD2012B00AD360E /* Assets.bundle */,
-				1810B05C1DD2012B00AD360E /* YouTubeiOSPlayerHelper.h */,
 			);
 			name = YoutubeHelper;
 			sourceTree = "<group>";
@@ -163,6 +160,7 @@
 		1840329E1DAA769500196E48 /* WebyclipSDK */ = {
 			isa = PBXGroup;
 			children = (
+				1840329F1DAA769500196E48 /* WebyclipSDK.h */,
 				1810B05A1DD2008000AD360E /* YoutubeHelper */,
 				B9C5BD8D1DCB45EE00B812AE /* Model */,
 				B9C5BD8C1DCB45D500B812AE /* WebyclipCarousel */,
@@ -170,7 +168,6 @@
 				184032D41DAA895300196E48 /* WebyclipSDKManager.swift */,
 				184032D51DAA895300196E48 /* WebyclipCarouselProtocol.swift */,
 				184032D61DAA895300196E48 /* WebyclipPlayerProtocol.swift */,
-				1840329F1DAA769500196E48 /* WebyclipSDK.h */,
 				184032A11DAA769500196E48 /* Info.plist */,
 				B94AF9961DC0B91B00A681C0 /* Images.xcassets */,
 			);
@@ -245,7 +242,6 @@
 			files = (
 				184032A01DAA769500196E48 /* WebyclipSDK.h in Headers */,
 				1810B0611DD2014200AD360E /* YTPlayerView.h in Headers */,
-				1810B05E1DD2012B00AD360E /* YouTubeiOSPlayerHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
