@@ -46,16 +46,10 @@ open class WebyclipPlayerController: UIViewController {
     
     fileprivate func closeView() {
         UIApplication.shared.statusBarStyle = .default
-        let cell = getActiveCell()
-        cell.mediaPlayer.alpha = 0.15
-        cell.mediaPlayer.stopVideo()
-        
-        self.initialIndex = 0
-        self.currentIndex = 0
-        
         UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseOut, animations: {
             self.uiView.frame = CGRect(x: 0, y: self.view.frame.height, width: self.view.frame.width, height: self.view.frame.height)
         }, completion: {(value: Bool) in
+            self.view = nil
             self.view.removeFromSuperview()
         })
     }
