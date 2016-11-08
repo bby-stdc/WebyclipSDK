@@ -10,9 +10,11 @@ Pod::Spec.new do |spec|
   spec.requires_arc = true
   spec.source = { git: "https://github.com/enbaya/WebyclipSDK.git", tag: "v#{spec.version}", submodules: true }
   spec.source_files = "WebyclipSDK/**/*.{h,swift}"
+  spec.resources = "WebyclipSDK/**/*.{xib,xcassets}"
+
+  spec.module_name = 'Reachability'
 
   spec.dependency "SwiftyJSON"
   spec.dependency "Alamofire"
   spec.dependency "CryptoSwift"
-  spec.dependency "youtube-ios-player-helper", "~> 0.1.4"
 end
