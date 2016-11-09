@@ -108,14 +108,6 @@ open class WebyclipPlayerController: UIViewController {
         super.init(coder: aDecoder)
     }
     
-    open override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
-    open override var prefersStatusBarHidden: Bool {
-        return true
-    }
-    
     override open func viewDidLoad() {
         super.viewDidLoad()
         
@@ -126,7 +118,7 @@ open class WebyclipPlayerController: UIViewController {
         
         self.uiView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         
-        NotificationCenter.default.addObserver(self, selector: #selector(WebyclipPlayerController.rotationHandler), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
+        //NotificationCenter.default.addObserver(self, selector: #selector(WebyclipPlayerController.rotationHandler), name: NSNotification.Name.UIDeviceOrientationDidChange, object: nil)
         
         self.setNeedsStatusBarAppearanceUpdate()
     }
@@ -142,7 +134,36 @@ open class WebyclipPlayerController: UIViewController {
         self.player?.scrollToItem(at: IndexPath(item: self.initialIndex!, section: 0), at: .top, animated: false)
     }
     
+    open override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        let cell = getActiveCell()
+        cell.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        if UIDevice.current.orientation.isLandscape {
+            self.closeButton.isHidden = true
+            self.playerTopConstraint.constant = 0
+            self.disclaimerButton.isHidden = true
+            self.disclaimerImage.isHidden = true
+        }
+        else {
+            self.closeButton.isHidden = false
+            self.playerTopConstraint.constant = 72
+            self.disclaimerButton.isHidden = false
+            self.disclaimerImage.isHidden = false
+        }
+    }
+    
     open override var shouldAutorotate: Bool {
+        return true
+    }
+    
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return [.portrait, .landscapeLeft, .landscapeRight]
+    }
+    
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    open override var prefersStatusBarHidden: Bool {
         return true
     }
     
