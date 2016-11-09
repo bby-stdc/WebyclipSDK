@@ -1,18 +1,24 @@
-Pod::Spec.new do |spec|
-  spec.name = "WebyclipSDK"
-  spec.version = "0.3.5"
-  spec.summary = "Webyclip SDK"
-  spec.homepage = "https://www.webyclip.com"
-  spec.license = { type: 'MIT', file: 'LICENSE' }
-  spec.authors = { "Webyclip" => 'info@webyclip.com' }
+Pod::Spec.new do |s|
+  s.name             = 'WebyclipSDK'
+  s.version          = '0.4.0'
+  s.summary          = 'iOS SDK for Webyclipl widgets'
+  s.description      = 'A native iOS SDK to show webyclip curated videos based on app content using the Webyclip Service'
+  s.homepage         = 'https://github.com/enbaya/WebyclipSDK'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'Nimrod Ben Yaakov' => 'nimiby@gmail.com' }
+  s.source           = { git: "https://github.com/enbaya/WebyclipSDK.git", tag: s.version }
 
-  spec.platform = :ios, "9.0"
-  spec.requires_arc = true
-  spec.source = { git: "https://github.com/enbaya/WebyclipSDK.git", tag: "0.3.5", submodules: true }
-  spec.source_files = "WebyclipSDK/**/*.{h,swift,m}"
-  spec.resources = "WebyclipSDK/**/*.{xib,xcassets,bundle}"
+  s.ios.deployment_target = '9.0'
 
-  spec.dependency "SwiftyJSON"
-  spec.dependency "Alamofire"
-  spec.dependency "CryptoSwift"
+  s.source_files = 'WebyclipSDK/Classes/**/*'
+  
+  s.resources = 'WebyclipSDK/Assets/**/*.{xib,xcassets,bundle}'
+
+  # s.public_header_files = 'Pod/Classes/**/*.h'
+  # s.frameworks = 'UIKit', 'MapKit'
+
+   s.dependency "SwiftyJSON", "~> 3.1.1"
+   s.dependency "Alamofire", "~> 4.0.1"
+   s.dependency "CryptoSwift", "~> 0.6.6"
+   s.dependency "youtube-ios-player-helper", "~> 0.1.6"
 end

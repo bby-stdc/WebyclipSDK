@@ -1,0 +1,6 @@
+framework module WebyclipSDK {
+  umbrella header "WebyclipSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

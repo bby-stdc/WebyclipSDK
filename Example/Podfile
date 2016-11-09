@@ -1,0 +1,5 @@
+use_frameworks!
+
+target 'WebyclipSDK_Example' do
+  pod 'WebyclipSDK', :path => '../'
+end

@@ -1,0 +1,6 @@
+framework module Pods_WebyclipSDK_Example {
+  umbrella header "Pods-WebyclipSDK_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
