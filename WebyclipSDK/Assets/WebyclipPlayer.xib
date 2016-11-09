@@ -96,12 +96,12 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGZ-uZ-IXG">
-                            <rect key="frame" x="323" y="9" width="11" height="11"/>
+                            <rect key="frame" x="317" y="1" width="25" height="25"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="11" id="2vd-Tu-wSS"/>
-                                <constraint firstAttribute="width" constant="11" id="6MH-QZ-2GY"/>
+                                <constraint firstAttribute="width" constant="25" id="jUd-8V-GAp"/>
+                                <constraint firstAttribute="height" constant="25" id="pRh-LN-yht"/>
                             </constraints>
-                            <state key="normal" image="bigXIconB"/>
+                            <state key="normal" image="bigXIconBlue"/>
                             <connections>
                                 <action selector="disclaimerCloseButtonHandler:" destination="-1" eventType="touchDown" id="yuh-tA-jGt"/>
                             </connections>
@@ -118,10 +118,10 @@
                         <constraint firstItem="5uj-SI-xHh" firstAttribute="leading" secondItem="VPR-yY-TXm" secondAttribute="leading" constant="16" id="4sT-UO-BIQ"/>
                         <constraint firstItem="ngj-8L-36n" firstAttribute="centerX" secondItem="VPR-yY-TXm" secondAttribute="centerX" constant="6" id="8gS-ID-21b"/>
                         <constraint firstItem="1t6-Ij-ZIS" firstAttribute="top" secondItem="VPR-yY-TXm" secondAttribute="top" constant="34" id="9kK-qI-DPA"/>
-                        <constraint firstAttribute="trailing" secondItem="qGZ-uZ-IXG" secondAttribute="trailing" constant="9" id="F09-DK-WFy"/>
+                        <constraint firstAttribute="trailing" secondItem="qGZ-uZ-IXG" secondAttribute="trailing" constant="1" id="F09-DK-WFy"/>
                         <constraint firstItem="5uj-SI-xHh" firstAttribute="top" secondItem="ngj-8L-36n" secondAttribute="bottom" constant="21" id="UWd-cA-6XC"/>
                         <constraint firstAttribute="trailing" secondItem="1t6-Ij-ZIS" secondAttribute="trailing" id="b7M-n4-0yO"/>
-                        <constraint firstItem="qGZ-uZ-IXG" firstAttribute="top" secondItem="VPR-yY-TXm" secondAttribute="top" constant="9" id="glA-Pm-yMg"/>
+                        <constraint firstItem="qGZ-uZ-IXG" firstAttribute="top" secondItem="VPR-yY-TXm" secondAttribute="top" constant="1" id="glA-Pm-yMg"/>
                         <constraint firstItem="ngj-8L-36n" firstAttribute="top" secondItem="1t6-Ij-ZIS" secondAttribute="bottom" constant="2" id="hgu-6W-cry"/>
                         <constraint firstAttribute="height" constant="232" id="nv4-0o-cTG"/>
                         <constraint firstAttribute="trailing" secondItem="5uj-SI-xHh" secondAttribute="trailing" constant="16" id="q5A-y7-3YF"/>
@@ -153,7 +153,7 @@
     </objects>
     <resources>
         <image name="bigXIcon" width="16" height="16"/>
-        <image name="bigXIconB" width="16" height="16"/>
+        <image name="bigXIconBlue" width="11" height="11"/>
         <image name="iIcon" width="12" height="12"/>
         <image name="webyclip_logo" width="350" height="96"/>
     </resources>
