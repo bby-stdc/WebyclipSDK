@@ -4,27 +4,12 @@ The Webyclip iOS SDK is a native iOS framework for integrating the Webyclip widg
 
 ## Installation
 
-Webyclip SDK uses [Carthage](https://github.com/Carthage/Carthage) for dependacy management (but can also be consumed directly as git submodule).
+WebyclipSDK is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
 
-To add Webyclip SDK using Carthage:
-* Create a `Cartfile` on your project root
-* Add a line to the `Cartfile` with the Webyclip dependacy:
+```ruby
+pod "WebyclipSDK"
 ```
-github "enbaya/WebyclipSDK"
-```
-* From your project root, run carthage to pull the dependacies:
-```sh
-carthage update --platform iOS --no-use-binaries
-```
-* Drag the following frameworks to your projects "Linked Frameworks and Libraries":
-```
-Carthage/Build/iOS/WebyclipSDK.framework
-Carthage/Build/iOS/YouTubeiOSPlayerHelper.framework
-Carthage/Build/iOS/SwiftyJSON.framework
-Carthage/Build/iOS/CryptoSwift.framework
-Carthage/Build/iOS/Alamofire.framework
-```
-* Add all these frameworks to your "copy framework" build phase
 
 ## Usage
 Please refer to the SDK [documentation](http://code.webyclip.com/doc/ios/index.html) to learn how to use the framework.
