@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,11 +21,48 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wG1-e2-xbQ">
+                                <rect key="frame" x="16" y="242" width="343" height="183"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wG1-e2-xbQ" secondAttribute="height" multiplier="15:8" id="Ah6-TX-3Ke"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rc4-Iv-6lg">
+                                <rect key="frame" x="146" y="60" width="83" height="30"/>
+                                <state key="normal" title="Open player"/>
+                                <connections>
+                                    <action selector="openPlayerHandler:" destination="vXZ-lx-hvc" eventType="touchDown" id="Ppz-Ft-azb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered by WebyClip (c)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4j-lz-sL1">
+                                <rect key="frame" x="16" y="617" width="343" height="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rc4-Iv-6lg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="40" id="IQG-de-PqZ"/>
+                            <constraint firstItem="wG1-e2-xbQ" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="KNs-kj-oNR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wG1-e2-xbQ" secondAttribute="trailing" id="QGz-lR-0HJ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="T4j-lz-sL1" secondAttribute="bottom" constant="25" id="TEV-hq-rha"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T4j-lz-sL1" secondAttribute="trailing" id="bhS-8Z-jbD"/>
+                            <constraint firstItem="wG1-e2-xbQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="hck-ND-gT5"/>
+                            <constraint firstItem="T4j-lz-sL1" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="oeC-4j-2Pz"/>
+                            <constraint firstItem="rc4-Iv-6lg" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="ydM-TT-HK9"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="carouselView" destination="wG1-e2-xbQ" id="QCa-W3-MMu"/>
+                        <outlet property="openButton" destination="rc4-Iv-6lg" id="GRP-4D-Cme"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="116" y="123.68815592203899"/>
         </scene>
     </scenes>
 </document>

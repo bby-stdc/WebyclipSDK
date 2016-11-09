@@ -62,35 +62,39 @@ open class WebyclipPlayerController: UIViewController {
         return view
     }
     
-    fileprivate func getActiveCell() -> WebyclipPlayerCollectionViewCell {
+    fileprivate func getActiveCell() -> WebyclipPlayerCollectionViewCell? {
         let cells = self.player?.visibleCells as! [WebyclipPlayerCollectionViewCell]
         let idx = cells.index(where: {
             $0.media.mediaId == self.medias![self.currentIndex!].mediaId
         })
         
-        return cells[idx!]
+        return idx == nil ? nil : cells[idx!]
     }
     
     func rotationHandler() {
         let cell = getActiveCell()
-        cell.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-        if UIDevice.current.orientation.isLandscape {
-            self.closeButton.isHidden = true
-            self.playerTopConstraint.constant = 0
-            self.disclaimerButton.isHidden = true
-            self.disclaimerImage.isHidden = true
-        }
-        else {
-            self.closeButton.isHidden = false
-            self.playerTopConstraint.constant = 72
-            self.disclaimerButton.isHidden = false
-            self.disclaimerImage.isHidden = false
+        if cell !== nil {
+            cell?.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+            let orientation = UIDevice.current.orientation
+            if orientation == .portrait {
+                self.closeButton.isHidden = false
+                self.playerTopConstraint.constant = 72
+                self.disclaimerButton.isHidden = false
+                self.disclaimerImage.isHidden = false
+            }
+            if orientation == .landscapeLeft || orientation == .landscapeRight {
+                self.closeButton.isHidden = true
+                self.playerTopConstraint.constant = 0
+                self.disclaimerButton.isHidden = true
+                self.disclaimerImage.isHidden = true
+                
+            }
         }
     }
     
     // MARK: - Public
     
-    /// Delegate for getting callbacks
+    // Delegate for getting callbacks
     open var delegate: WebyclipPlayerProtocol?
 
     /**
@@ -106,14 +110,6 @@ open class WebyclipPlayerController: UIViewController {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-    }
-    
-    open override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-    
-    open override var prefersStatusBarHidden: Bool {
-        return true
     }
     
     override open func viewDidLoad() {
@@ -142,7 +138,19 @@ open class WebyclipPlayerController: UIViewController {
         self.player?.scrollToItem(at: IndexPath(item: self.initialIndex!, section: 0), at: .top, animated: false)
     }
     
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return [.portrait, .landscapeLeft, .landscapeRight]
+    }
+    
     open override var shouldAutorotate: Bool {
+        return true
+    }
+    
+    open override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    open override var prefersStatusBarHidden: Bool {
         return true
     }
     
@@ -188,9 +196,11 @@ extension WebyclipPlayerController: YTPlayerViewDelegate {
     
     public func playerViewDidBecomeReady(_ playerView: YTPlayerView) {
         let cell = getActiveCell()
-        cell.mediaPlayer.isUserInteractionEnabled = true
-        cell.mediaPlayer.alpha = 1
-        cell.mediaPlayer.playVideo()
+        if cell !== nil {
+            cell?.mediaPlayer.isUserInteractionEnabled = true
+            cell?.mediaPlayer.alpha = 1
+            cell?.mediaPlayer.playVideo()
+        }
     }
 }
 
