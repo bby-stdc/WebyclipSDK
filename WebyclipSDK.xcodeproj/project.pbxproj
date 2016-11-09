@@ -161,13 +161,11 @@
 			isa = PBXGroup;
 			children = (
 				1840329F1DAA769500196E48 /* WebyclipSDK.h */,
+				184032D41DAA895300196E48 /* WebyclipSDKManager.swift */,
 				1810B05A1DD2008000AD360E /* YoutubeHelper */,
 				B9C5BD8D1DCB45EE00B812AE /* Model */,
 				B9C5BD8C1DCB45D500B812AE /* WebyclipCarousel */,
 				B9C5BD8B1DCB45A200B812AE /* WebyclipPlayer */,
-				184032D41DAA895300196E48 /* WebyclipSDKManager.swift */,
-				184032D51DAA895300196E48 /* WebyclipCarouselProtocol.swift */,
-				184032D61DAA895300196E48 /* WebyclipPlayerProtocol.swift */,
 				184032A11DAA769500196E48 /* Info.plist */,
 				B94AF9961DC0B91B00A681C0 /* Images.xcassets */,
 			);
@@ -222,11 +220,13 @@
 			children = (
 				184032D11DAA895300196E48 /* WebyclipCarouselConfig.swift */,
 				B9C5BD831DCB1BA800B812AE /* WebyclipCarouselItem.swift */,
+				184032D51DAA895300196E48 /* WebyclipCarouselProtocol.swift */,
 				184032D21DAA895300196E48 /* WebyclipContext.swift */,
 				184032D31DAA895300196E48 /* WebyclipContextConfig.swift */,
 				184032CF1DAA895300196E48 /* WebyclipMedia.swift */,
 				184032D01DAA895300196E48 /* WebyclipPlayerConfig.swift */,
 				B978400C1DCD2779008DA629 /* WebyclipPlayerItem.swift */,
+				184032D61DAA895300196E48 /* WebyclipPlayerProtocol.swift */,
 				184032D71DAA895300196E48 /* WebyclipRelatedItem.swift */,
 				184032CE1DAA895300196E48 /* WebyclipSession.swift */,
 			);
