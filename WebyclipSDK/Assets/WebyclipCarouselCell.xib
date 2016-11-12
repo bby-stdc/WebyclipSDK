@@ -4,9 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -19,35 +17,36 @@
                 <rect key="frame" x="0.0" y="0.0" width="280" height="220"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carousel Item Title Carousel Item Title Carousel Item Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGb-c0-Ipb">
-                        <rect key="frame" x="0.0" y="171" width="280" height="38.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carousel Item Title Carousel Item Title Carousel Item Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGb-c0-Ipb">
+                        <rect key="frame" x="0.0" y="180" width="280" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="jBG-u2-EQs"/>
+                        </constraints>
                         <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                         <color key="textColor" red="0.0" green="0.23137254901960785" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZN-ow-ztL">
-                        <rect key="frame" x="0.0" y="0.0" width="280" height="157.5"/>
-                        <constraints>
-                            <constraint firstAttribute="width" secondItem="wZN-ow-ztL" secondAttribute="height" multiplier="16:9" id="g78-hu-mfz"/>
-                        </constraints>
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="166"/>
                         <connections>
                             <action selector="openPlayerHandler:" destination="jC4-5y-lbK" eventType="touchDown" id="7RO-Ps-wGY"/>
                         </connections>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playbutton" translatesAutoresizingMaskIntoConstraints="NO" id="fBL-IB-2BE">
-                        <rect key="frame" x="114" y="53" width="52" height="52"/>
+                        <rect key="frame" x="114" y="57" width="52" height="52"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="wZN-ow-ztL" firstAttribute="top" secondItem="jC4-5y-lbK" secondAttribute="top" id="AeA-Ik-OnE"/>
                 <constraint firstItem="wZN-ow-ztL" firstAttribute="leading" secondItem="jC4-5y-lbK" secondAttribute="leading" id="IRe-7o-IYP"/>
+                <constraint firstItem="KGb-c0-Ipb" firstAttribute="top" secondItem="wZN-ow-ztL" secondAttribute="bottom" constant="14" id="J5f-zF-4hn"/>
                 <constraint firstAttribute="trailing" secondItem="KGb-c0-Ipb" secondAttribute="trailing" id="ajr-Nf-gH7"/>
                 <constraint firstItem="KGb-c0-Ipb" firstAttribute="leading" secondItem="jC4-5y-lbK" secondAttribute="leading" id="eBu-dI-3lt"/>
                 <constraint firstItem="fBL-IB-2BE" firstAttribute="centerY" secondItem="wZN-ow-ztL" secondAttribute="centerY" id="iIE-U3-Be4"/>
-                <constraint firstItem="KGb-c0-Ipb" firstAttribute="top" secondItem="wZN-ow-ztL" secondAttribute="bottom" constant="14" id="nVf-vx-ZTQ"/>
                 <constraint firstItem="fBL-IB-2BE" firstAttribute="centerX" secondItem="jC4-5y-lbK" secondAttribute="centerX" id="t09-9E-GsW"/>
                 <constraint firstAttribute="trailing" secondItem="wZN-ow-ztL" secondAttribute="trailing" id="uwd-oy-dh4"/>
+                <constraint firstAttribute="bottom" secondItem="KGb-c0-Ipb" secondAttribute="bottom" id="vv4-HY-Q4l"/>
             </constraints>
             <connections>
                 <outlet property="mediaThumbnail" destination="wZN-ow-ztL" id="VoN-mg-IRT"/>

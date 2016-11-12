@@ -57,16 +57,23 @@ open class WebyclipCarouselController: UIViewController {
         let view = loadViewFromNib()
         self.view.addSubview(view)
         self.carousel.register(UINib(nibName: "WebyclipCarouselCell", bundle: Bundle(for: type(of: self))), forCellWithReuseIdentifier: View.CellIdentifier)
-        
-        self.uiView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+    }
+    
+    open override func viewDidAppear(_ animated: Bool) {
+        self.uiView.frame = CGRect(x: 0, y: 0, width: (self.view.superview?.frame.width)!, height: (self.view.superview?.frame.height)!)
     }
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
 extension WebyclipCarouselController: UICollectionViewDelegateFlowLayout {
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        self.cellWidth = self.view.frame.width / 1.5
-        return CGSize(width: cellWidth!, height: collectionView.bounds.size.height)
+        guard let cellHeight = self.view.superview?.frame.height, let cellWidth = self.view.superview?.frame.width else {
+            self.cellWidth = self.view.frame.width / 1.5
+            return CGSize(width: self.cellWidth!, height: self.view.frame.height)
+        }
+
+        self.cellWidth = (cellWidth - collectionView.layoutMargins.right - collectionView.layoutMargins.left) / 1.5
+        return CGSize(width: self.cellWidth!, height: cellHeight ) //collectionView.bounds.size.height)
     }
 }
 
