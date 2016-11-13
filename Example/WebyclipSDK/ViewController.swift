@@ -4,10 +4,10 @@ import WebyclipSDK
 class ViewController: UIViewController, WebyclipCarouselProtocol, WebyclipPlayerProtocol {
     
     @IBOutlet var carouselView: UIView!
+    @IBOutlet var carouselViewCompact: UIView!
     @IBOutlet var openButton: UIButton!
     
     var playerController : WebyclipPlayerController?
-    var carouselController : WebyclipCarouselController?
     
     @IBAction func openPlayerHandler(_ sender: AnyObject) {
         self.playerController!.openPlayer(nil)
@@ -22,15 +22,21 @@ class ViewController: UIViewController, WebyclipCarouselProtocol, WebyclipPlayer
         session.createContext(contextConfig, success:
             { context in
                 if context.hasMedia() {
+                    // Player initialization
                     let playerConfig = WebyclipPlayerConfig()
                     self.playerController = session.createPlayer(playerConfig, context: context)
                     self.playerController?.delegate = self
                     
+                    // Carousel initialization (default design)
                     let carouselConfig = WebyclipCarouselConfig()
-                    self.carouselController = session.createCarousel(context, player: self.playerController!, carouselConfig: carouselConfig)
-                    self.carouselController?.delegate = self
+                    let carouselController = session.createCarousel(context, player: self.playerController!, carouselConfig: carouselConfig)
+                    carouselController.delegate = self
+                    self.carouselView.addSubview(carouselController.view)
                     
-                    self.carouselView.addSubview(self.carouselController!.view)
+                    // Carousel initialization (compact design)
+                    let carouselConfigCompact = WebyclipCarouselConfig(compact: true)
+                    let carouselControllerCompact = session.createCarousel(context, player: self.playerController!, carouselConfig: carouselConfigCompact)
+                    self.carouselViewCompact.addSubview(carouselControllerCompact.view)
                 }
         }, error: { error in
         })

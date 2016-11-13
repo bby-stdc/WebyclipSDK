@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wG1-e2-xbQ">
-                                <rect key="frame" x="16" y="242" width="343" height="183"/>
+                                <rect key="frame" x="16" y="192" width="343" height="183"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wG1-e2-xbQ" secondAttribute="height" multiplier="15:8" id="Ah6-TX-3Ke"/>
@@ -42,12 +42,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZtB-WY-vvu">
+                                <rect key="frame" x="16" y="395" width="343" height="52"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="8UI-XI-keS"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ZtB-WY-vvu" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="5ii-eo-Gju"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZtB-WY-vvu" secondAttribute="trailing" id="BHf-qZ-On2"/>
                             <constraint firstItem="rc4-Iv-6lg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="40" id="IQG-de-PqZ"/>
-                            <constraint firstItem="wG1-e2-xbQ" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="KNs-kj-oNR"/>
+                            <constraint firstItem="wG1-e2-xbQ" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" constant="-50" id="KNs-kj-oNR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wG1-e2-xbQ" secondAttribute="trailing" id="QGz-lR-0HJ"/>
+                            <constraint firstItem="ZtB-WY-vvu" firstAttribute="top" secondItem="wG1-e2-xbQ" secondAttribute="bottom" constant="20" id="RdW-eZ-XTJ"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="T4j-lz-sL1" secondAttribute="bottom" constant="25" id="TEV-hq-rha"/>
                             <constraint firstAttribute="trailingMargin" secondItem="T4j-lz-sL1" secondAttribute="trailing" id="bhS-8Z-jbD"/>
                             <constraint firstItem="wG1-e2-xbQ" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="hck-ND-gT5"/>
@@ -57,6 +67,7 @@
                     </view>
                     <connections>
                         <outlet property="carouselView" destination="wG1-e2-xbQ" id="QCa-W3-MMu"/>
+                        <outlet property="carouselViewCompact" destination="ZtB-WY-vvu" id="krf-M3-Z65"/>
                         <outlet property="openButton" destination="rc4-Iv-6lg" id="GRP-4D-Cme"/>
                     </connections>
                 </viewController>

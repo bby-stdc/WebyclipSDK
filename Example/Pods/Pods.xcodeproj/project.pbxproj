@@ -29,7 +29,7 @@
 		21407290DA070834C4BD5C73D8F58997 /* WebyclipPlayer.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9E4B7812E18186FA84D22E82ABA085F /* WebyclipPlayer.xib */; };
 		21464053A793ADBF01C48368A739B210 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E2236E7ECB0AFEC4DB2E0DBA2626CA7 /* Foundation.framework */; };
 		23349CEDE1E92CB7A4AA8239B7F2AC88 /* YTPlayerView.h in Headers */ = {isa = PBXBuildFile; fileRef = 778AD1DA98969AE3F807623101658FBF /* YTPlayerView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		23C7143FAD26BA88FCA922213470F33A /* WebyclipPlayerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55288520D7C45BBF4C407B9B39266ADB /* WebyclipPlayerCollectionViewCell.swift */; };
+		23C7143FAD26BA88FCA922213470F33A /* WebyclipPlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55288520D7C45BBF4C407B9B39266ADB /* WebyclipPlayerCell.swift */; };
 		27B51EBF9988DA4FEB8E6CAFD2548020 /* PKCS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E03B48EDEB324FE31787710E53EB871 /* PKCS5.swift */; };
 		28E67BD1AA55A413D76547655BBCB39E /* ChaCha20+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A906698C7545BE2C198B6EA6424D7C /* ChaCha20+Foundation.swift */; };
 		2C4380E25F2E5EE68C512B13084D8E69 /* CSArrayType+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B916D089DB1E53018170B5C6F84FD8 /* CSArrayType+Foundation.swift */; };
@@ -54,7 +54,7 @@
 		538F732CB83C6C31BCE09E9CA21EC402 /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC6A5BA93BAEE20F1CA1BE8D6E10157 /* Digest.swift */; };
 		56794B7B7000813CFCF4784CBF3FF116 /* SHA2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0232DE262CB1D94382B023625B5E3998 /* SHA2.swift */; };
 		61200D01A1855D7920CEF835C8BE00B0 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C02383D36F0E58810DC7AFE78DC1D2 /* DispatchQueue+Alamofire.swift */; };
-		614717A4F9AD2464C17475578EEA09A4 /* WebyclipCarouselController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623614836456BEEEADCB725D905D86C5 /* WebyclipCarouselController.swift */; };
+		614717A4F9AD2464C17475578EEA09A4 /* WebyclipCarouselBaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623614836456BEEEADCB725D905D86C5 /* WebyclipCarouselBaseController.swift */; };
 		62F65AD8DC4F0F9610F4B8B4738EC094 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222C0CA7AB4493C99CA667888FD4C628 /* ServerTrustPolicy.swift */; };
 		69DFD5000E2339C0F995C5F29AA82D04 /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EE088D3635DE1EABE3DFE99A7A3D1360 /* SwiftyJSON-dummy.m */; };
 		6ED8999BF8300C97DFC665A6B74F3D10 /* WebyclipCarouselProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 161457118FF4E7E518015E16639235CE /* WebyclipCarouselProtocol.swift */; };
@@ -96,6 +96,9 @@
 		B35F9BCA74547B37EF08A2E97C5D5BEE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF79E604C0C09AD88E769BB6A606772 /* Images.xcassets */; };
 		B36EAE1B4DAFF771587BB25CAAC8168C /* String+FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C014197695DE2E716B6E579B85A5E /* String+FoundationExtension.swift */; };
 		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0830A52AE7F937377364B6FF1C095FA /* MultipartFormData.swift */; };
+		B9B2FDE61DD871B300B92E4F /* WebyclipCarouselDefaultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B2FDE41DD86CC000B92E4F /* WebyclipCarouselDefaultController.swift */; };
+		B9B2FDE91DD87FE700B92E4F /* WebyclipCarouselCompactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B2FDE71DD87E0700B92E4F /* WebyclipCarouselCompactController.swift */; };
+		B9B2FDEA1DD8876700B92E4F /* WebyclipCarouselCompactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B2FDE21DD8601D00B92E4F /* WebyclipCarouselCompactCell.xib */; };
 		BAD2AE43D0483BB0DDE4E6031AEFC763 /* WebyclipPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8E8725A603AFD3907896A30021BDA9 /* WebyclipPlayerItem.swift */; };
 		BBEFE2F9CEB73DC7BD97FFA66A0D9D4F /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5C6F3BB4F9401D84B446A27BE9B0D6 /* Validation.swift */; };
 		BD7EAFE2B8E21B83A543E4EC4334E240 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33D224F733ADB44FA9A1F27E99336BE /* Authenticator.swift */; };
@@ -120,7 +123,7 @@
 		E38679F87E9030461022F75E4796927F /* AES+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CC0579D1C52C13039160B914700BC8 /* AES+Foundation.swift */; };
 		E7124A653464FAF4FB49B9687576923C /* WebyclipCarousel.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DA318FB8A19BD51F15E4925291D0FAC /* WebyclipCarousel.xib */; };
 		EBDFBD13096552AB8EDD99BFC6FAF71E /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 134B291E966D2D0F30F342000A8D3007 /* Collection+Extension.swift */; };
-		EC1C90327DA039A26982D8D5EB70D641 /* WebyclipCarouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5643A09B68469AA3431A59CAE54F3D /* WebyclipCarouselCollectionViewCell.swift */; };
+		EC1C90327DA039A26982D8D5EB70D641 /* WebyclipCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A5643A09B68469AA3431A59CAE54F3D /* WebyclipCarouselCell.swift */; };
 		EDD46F771E7D1ED4D46B43D5E08DE5DB /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 41CD5C9B2E93E05BF8FE4698D712273A /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 340583550C81FB190C97B8D37F15B29F /* Notifications.swift */; };
 		F00AC3E67DC9B01187C3C0B614D3D9DF /* Pods-WebyclipSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ABF5864307D7D24E414C4AFDC7E5FC5E /* Pods-WebyclipSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -230,8 +233,8 @@
 		26B1A2BF5C549F7DE4085995B5FC2A1D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29BF65959D963DDED22A4B1906C61734 /* OFB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OFB.swift; path = Sources/CryptoSwift/BlockMode/OFB.swift; sourceTree = "<group>"; };
 		2B7144E1B5953B14BF6AEBBE3D227BEE /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		2CA19D3963F4F911A785A63EADF6D395 /* Pods_WebyclipSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_WebyclipSDK_Example.framework; path = "Pods-WebyclipSDK_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2E134DDA1AAB39F083014474B4672425 /* CryptoSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = CryptoSwift.modulemap; sourceTree = "<group>"; };
+		2CA19D3963F4F911A785A63EADF6D395 /* Pods_WebyclipSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WebyclipSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E134DDA1AAB39F083014474B4672425 /* CryptoSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CryptoSwift.modulemap; sourceTree = "<group>"; };
 		340583550C81FB190C97B8D37F15B29F /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		3B39925ADA40CEDC780C9942C50F8198 /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = Sources/CryptoSwift/HMAC.swift; sourceTree = "<group>"; };
 		3C24ACE3471B93FBFE987FAEB82ACAC1 /* Checksum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Checksum.swift; path = Sources/CryptoSwift/Checksum.swift; sourceTree = "<group>"; };
@@ -248,9 +251,9 @@
 		4DA318FB8A19BD51F15E4925291D0FAC /* WebyclipCarousel.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WebyclipCarousel.xib; sourceTree = "<group>"; };
 		4E3C9170AA334C43DEAD80BD9DC29DAD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F29C12736D852BF4216B8AAF751A77C /* Blowfish.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blowfish.swift; path = Sources/CryptoSwift/Blowfish.swift; sourceTree = "<group>"; };
-		55288520D7C45BBF4C407B9B39266ADB /* WebyclipPlayerCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebyclipPlayerCollectionViewCell.swift; sourceTree = "<group>"; };
+		55288520D7C45BBF4C407B9B39266ADB /* WebyclipPlayerCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebyclipPlayerCell.swift; sourceTree = "<group>"; };
 		55B67C0EBB9A51D9C7EE85CB605900A1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5A5643A09B68469AA3431A59CAE54F3D /* WebyclipCarouselCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebyclipCarouselCollectionViewCell.swift; sourceTree = "<group>"; };
+		5A5643A09B68469AA3431A59CAE54F3D /* WebyclipCarouselCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebyclipCarouselCell.swift; sourceTree = "<group>"; };
 		5B1538D289FBA49EE2DD8AAFF4AB67D7 /* youtube_ios_player_helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = youtube_ios_player_helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C0B7F54BDB18A8E81BA428886129BDC /* Cipher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cipher.swift; path = Sources/CryptoSwift/Cipher.swift; sourceTree = "<group>"; };
 		5CF09161495B10E114205860C62C4622 /* Pods-WebyclipSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-WebyclipSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -258,21 +261,21 @@
 		5E6E2D43064516741C085808CF2DF836 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
 		60E59DE82F1394B5C706E84A5DEA6E85 /* HMAC+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HMAC+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/HMAC+Foundation.swift"; sourceTree = "<group>"; };
 		619A0D86F8ABF68253A394C7D8EC94F6 /* Poly1305.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Poly1305.swift; path = Sources/CryptoSwift/Poly1305.swift; sourceTree = "<group>"; };
-		623614836456BEEEADCB725D905D86C5 /* WebyclipCarouselController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebyclipCarouselController.swift; sourceTree = "<group>"; };
+		623614836456BEEEADCB725D905D86C5 /* WebyclipCarouselBaseController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebyclipCarouselBaseController.swift; sourceTree = "<group>"; };
 		634C707E8D6E9CBE059172781967E96B /* WebyclipPlayerConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebyclipPlayerConfig.swift; sourceTree = "<group>"; };
 		65DCDA5433ED65538C0744BE57B84B27 /* youtube-ios-player-helper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "youtube-ios-player-helper.xcconfig"; sourceTree = "<group>"; };
 		67956AA4384CE2163FF3C107CF4C80CD /* WebyclipContextConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebyclipContextConfig.swift; sourceTree = "<group>"; };
 		697BBFD1A0110CB6A73971AD32F3DA5B /* NoPadding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NoPadding.swift; path = Sources/CryptoSwift/NoPadding.swift; sourceTree = "<group>"; };
-		6A51595179CFEB3FC3ACD77A1F969C58 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
+		6A51595179CFEB3FC3ACD77A1F969C58 /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
 		6A8E8725A603AFD3907896A30021BDA9 /* WebyclipPlayerItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebyclipPlayerItem.swift; sourceTree = "<group>"; };
 		6D1403CC648F4BFC8609F26D70607C96 /* Rabbit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rabbit.swift; path = Sources/CryptoSwift/Rabbit.swift; sourceTree = "<group>"; };
-		6F0B07F490EB1E213789145655A553AA /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Alamofire.modulemap; sourceTree = "<group>"; };
+		6F0B07F490EB1E213789145655A553AA /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		6F31C61CD69DEBB4F837ABC185F1A08D /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/CryptoSwift/Operators.swift; sourceTree = "<group>"; };
 		6F82B042C1F794C0C21ED6AB1FB35322 /* BlockCipher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockCipher.swift; path = Sources/CryptoSwift/BlockCipher.swift; sourceTree = "<group>"; };
 		7038EDBCBBEA34E72588F9616D78E892 /* ZeroPadding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZeroPadding.swift; path = Sources/CryptoSwift/ZeroPadding.swift; sourceTree = "<group>"; };
 		706DA51AD656EB6B1FA2DE125D73AF1E /* AFError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AFError.swift; path = Source/AFError.swift; sourceTree = "<group>"; };
 		70D4948042A145C15B07D40FC13C69D8 /* WebyclipSession.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebyclipSession.swift; sourceTree = "<group>"; };
-		75A1CE454711BA37429076A411F676A1 /* Pods-WebyclipSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-WebyclipSDK_Example.modulemap"; sourceTree = "<group>"; };
+		75A1CE454711BA37429076A411F676A1 /* Pods-WebyclipSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-WebyclipSDK_Example.modulemap"; sourceTree = "<group>"; };
 		778AD1DA98969AE3F807623101658FBF /* YTPlayerView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YTPlayerView.h; path = Classes/YTPlayerView.h; sourceTree = "<group>"; };
 		781C209E8A06728ED5F0BCE50EBC5222 /* Utils+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Utils+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Utils+Foundation.swift"; sourceTree = "<group>"; };
 		8040AA99206DB5ECDAA390EB8316A41F /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -287,7 +290,7 @@
 		90A7A04E8C82D34C05EE3137A7B7680B /* UInt64+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt64+Extension.swift"; path = "Sources/CryptoSwift/UInt64+Extension.swift"; sourceTree = "<group>"; };
 		90B351A0025EA6D090C0FAB1632085AC /* RandomAccessBlockModeWorker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomAccessBlockModeWorker.swift; path = Sources/CryptoSwift/BlockMode/RandomAccessBlockModeWorker.swift; sourceTree = "<group>"; };
 		91A906698C7545BE2C198B6EA6424D7C /* ChaCha20+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ChaCha20+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/ChaCha20+Foundation.swift"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93E3A6C1BE6E411C90295107A4EAB83E /* Padding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Padding.swift; path = Sources/CryptoSwift/Padding.swift; sourceTree = "<group>"; };
 		94A523EEE696B2C91281C8B50CC49736 /* ChaCha20.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChaCha20.swift; path = Sources/CryptoSwift/ChaCha20.swift; sourceTree = "<group>"; };
 		95BC206A36F015D72DAD5B8C56734F9C /* CryptoSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoSwift-umbrella.h"; sourceTree = "<group>"; };
@@ -298,16 +301,19 @@
 		A48A8AF3AD5382548F47B60C2F98FB27 /* WebyclipCarouselCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WebyclipCarouselCell.xib; sourceTree = "<group>"; };
 		A5CC0579D1C52C13039160B914700BC8 /* AES+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AES+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/AES+Foundation.swift"; sourceTree = "<group>"; };
 		A5F5E4889100BF58B7918F37639B330C /* DigestType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DigestType.swift; path = Sources/CryptoSwift/DigestType.swift; sourceTree = "<group>"; };
-		A77C7A5EFEA973D4F341697C4C52F452 /* youtube_ios_player_helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = youtube_ios_player_helper.framework; path = "youtube-ios-player-helper.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A77C7A5EFEA973D4F341697C4C52F452 /* youtube_ios_player_helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = youtube_ios_player_helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8E16592A8E2105A1EB1C419E120482A /* RandomBytesSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomBytesSequence.swift; path = Sources/CryptoSwift/RandomBytesSequence.swift; sourceTree = "<group>"; };
-		AA05312CA6782954D458E0F4CAD44C05 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Alamofire.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAB811AFFCA6A55F1541698E798BE09F /* youtube-ios-player-helper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "youtube-ios-player-helper.modulemap"; sourceTree = "<group>"; };
+		AA05312CA6782954D458E0F4CAD44C05 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAB811AFFCA6A55F1541698E798BE09F /* youtube-ios-player-helper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "youtube-ios-player-helper.modulemap"; sourceTree = "<group>"; };
 		ABF5864307D7D24E414C4AFDC7E5FC5E /* Pods-WebyclipSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-WebyclipSDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		ACF45336FF973BBABA96C740CDD3CA8D /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		AE50C17923BCBF89636B83F7FE9F027B /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA11DDE8F54FB4BD0A3C8219F1F42AD /* youtube-ios-player-helper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "youtube-ios-player-helper-prefix.pch"; sourceTree = "<group>"; };
+		B9B2FDE21DD8601D00B92E4F /* WebyclipCarouselCompactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebyclipCarouselCompactCell.xib; sourceTree = "<group>"; };
+		B9B2FDE41DD86CC000B92E4F /* WebyclipCarouselDefaultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipCarouselDefaultController.swift; sourceTree = "<group>"; };
+		B9B2FDE71DD87E0700B92E4F /* WebyclipCarouselCompactController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipCarouselCompactController.swift; sourceTree = "<group>"; };
 		BCBDBEFE8A577A70ABD1503641B213C0 /* UInt32+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt32+Extension.swift"; path = "Sources/CryptoSwift/UInt32+Extension.swift"; sourceTree = "<group>"; };
-		BEF505358DE39A3E2B2D52EBC10DEBEF /* WebyclipSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = WebyclipSDK.modulemap; sourceTree = "<group>"; };
+		BEF505358DE39A3E2B2D52EBC10DEBEF /* WebyclipSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = WebyclipSDK.modulemap; sourceTree = "<group>"; };
 		BF3E45089331DEF46033B1AA0EB814D2 /* WebyclipSDKManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebyclipSDKManager.swift; sourceTree = "<group>"; };
 		C066D56A1E5239F3D07A81C28F0EFCAE /* WebyclipPlayerCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WebyclipPlayerCell.xib; sourceTree = "<group>"; };
 		C1149010F973A8240A18538837083B42 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
@@ -334,9 +340,9 @@
 		E2000FAD1BAC3824DB0804DCE0EF698A /* CTR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CTR.swift; path = Sources/CryptoSwift/BlockMode/CTR.swift; sourceTree = "<group>"; };
 		E36B7C62357924BF23A37FDD92BDB202 /* SecureBytes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureBytes.swift; path = Sources/CryptoSwift/SecureBytes.swift; sourceTree = "<group>"; };
 		E6450DFCD767799440C3C92F47A62172 /* SHA3.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA3.swift; path = Sources/CryptoSwift/SHA3.swift; sourceTree = "<group>"; };
-		E7577CB0B68B833FC0DF16B4AF692B23 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyJSON.framework; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7577CB0B68B833FC0DF16B4AF692B23 /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E949961AA9C790DC6A6CB948DABCEB1C /* Pods-WebyclipSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-WebyclipSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
-		E9C3C341539F66057F2B7640954B9578 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CryptoSwift.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9C3C341539F66057F2B7640954B9578 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9E4B7812E18186FA84D22E82ABA085F /* WebyclipPlayer.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WebyclipPlayer.xib; sourceTree = "<group>"; };
 		EC3D16723C6BAF5E9B57D0885C48FDC6 /* Assets.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = Assets.bundle; path = "youtube-ios-player-helper/Assets.bundle"; sourceTree = "<group>"; };
 		ECC2BCE764325223378A5195465B6098 /* CSArrayType+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CSArrayType+Extensions.swift"; path = "Sources/CryptoSwift/CSArrayType+Extensions.swift"; sourceTree = "<group>"; };
@@ -350,7 +356,7 @@
 		F4D0CECFF76A7D7900C58AD55B1BE152 /* Bit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bit.swift; path = Sources/CryptoSwift/Bit.swift; sourceTree = "<group>"; };
 		F50CA27A29B4CB325A30C9CA67CA3EFF /* WebyclipContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = WebyclipContext.swift; sourceTree = "<group>"; };
 		F579C34E2EE32A3BEE24A56B754BB771 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		F7858E972C9709A7ED693DDEAF8DA69C /* WebyclipSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WebyclipSDK.framework; path = WebyclipSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7858E972C9709A7ED693DDEAF8DA69C /* WebyclipSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WebyclipSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F788678B807C58FEB35A10B9A23A6BBA /* RandomAccessCryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomAccessCryptor.swift; path = Sources/CryptoSwift/RandomAccessCryptor.swift; sourceTree = "<group>"; };
 		F9C02383D36F0E58810DC7AFE78DC1D2 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DispatchQueue+Alamofire.swift"; path = "Source/DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
 		FA3C9DAB2E8A1DD93121A365AB76C865 /* IntegerConvertible.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IntegerConvertible.swift; path = Sources/CryptoSwift/IntegerConvertible.swift; sourceTree = "<group>"; };
@@ -472,7 +478,6 @@
 			children = (
 				876A02435ABA51F11CD78384FA59C103 /* Classes */,
 			);
-			name = WebyclipSDK;
 			path = WebyclipSDK;
 			sourceTree = "<group>";
 		};
@@ -551,7 +556,6 @@
 				7038EDBCBBEA34E72588F9616D78E892 /* ZeroPadding.swift */,
 				776E197F87458F44DDA49EF6F9DB035F /* Support Files */,
 			);
-			name = CryptoSwift;
 			path = CryptoSwift;
 			sourceTree = "<group>";
 		};
@@ -577,7 +581,6 @@
 				9E5C6F3BB4F9401D84B446A27BE9B0D6 /* Validation.swift */,
 				85D847D7FD9CDDF4D543F0C9CFACA72C /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -644,24 +647,11 @@
 		876A02435ABA51F11CD78384FA59C103 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				5A5643A09B68469AA3431A59CAE54F3D /* WebyclipCarouselCollectionViewCell.swift */,
-				FC243F33F28CD9BEB7DB3137428FE004 /* WebyclipCarouselConfig.swift */,
-				623614836456BEEEADCB725D905D86C5 /* WebyclipCarouselController.swift */,
-				CC4D9C4CF0119239D39ECCF101EA20C8 /* WebyclipCarouselItem.swift */,
-				161457118FF4E7E518015E16639235CE /* WebyclipCarouselProtocol.swift */,
-				F50CA27A29B4CB325A30C9CA67CA3EFF /* WebyclipContext.swift */,
-				67956AA4384CE2163FF3C107CF4C80CD /* WebyclipContextConfig.swift */,
-				09FD4F50333FFF5064EC8B9D9845EE0F /* WebyclipMedia.swift */,
-				55288520D7C45BBF4C407B9B39266ADB /* WebyclipPlayerCollectionViewCell.swift */,
-				634C707E8D6E9CBE059172781967E96B /* WebyclipPlayerConfig.swift */,
-				1083146BB68F4412608AFD6F1E3E6F76 /* WebyclipPlayerController.swift */,
-				6A8E8725A603AFD3907896A30021BDA9 /* WebyclipPlayerItem.swift */,
-				CC5091EC573416383760A3C892E64464 /* WebyclipPlayerProtocol.swift */,
-				1CC3D679943F77F09A2ACCBDC7660D6C /* WebyclipRelatedItem.swift */,
+				B9986B891DD8DF1900D08465 /* Models */,
+				B9986B881DD8D74100D08465 /* WebyclipPlayer */,
+				B9B2FDE31DD86BAC00B92E4F /* WebyclipCarousel */,
 				BF3E45089331DEF46033B1AA0EB814D2 /* WebyclipSDKManager.swift */,
-				70D4948042A145C15B07D40FC13C69D8 /* WebyclipSession.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -671,10 +661,10 @@
 				CDF79E604C0C09AD88E769BB6A606772 /* Images.xcassets */,
 				4DA318FB8A19BD51F15E4925291D0FAC /* WebyclipCarousel.xib */,
 				A48A8AF3AD5382548F47B60C2F98FB27 /* WebyclipCarouselCell.xib */,
+				B9B2FDE21DD8601D00B92E4F /* WebyclipCarouselCompactCell.xib */,
 				E9E4B7812E18186FA84D22E82ABA085F /* WebyclipPlayer.xib */,
 				C066D56A1E5239F3D07A81C28F0EFCAE /* WebyclipPlayerCell.xib */,
 			);
-			name = Assets;
 			path = Assets;
 			sourceTree = "<group>";
 		};
@@ -684,7 +674,6 @@
 				FF9577D9ECC3F2C6DDA61FF33FF39C32 /* SwiftyJSON.swift */,
 				E31BCDC22483D85A17831B5B002A1762 /* Support Files */,
 			);
-			name = SwiftyJSON;
 			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
@@ -712,6 +701,44 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B9986B881DD8D74100D08465 /* WebyclipPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				55288520D7C45BBF4C407B9B39266ADB /* WebyclipPlayerCell.swift */,
+				1083146BB68F4412608AFD6F1E3E6F76 /* WebyclipPlayerController.swift */,
+			);
+			name = WebyclipPlayer;
+			sourceTree = "<group>";
+		};
+		B9986B891DD8DF1900D08465 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC243F33F28CD9BEB7DB3137428FE004 /* WebyclipCarouselConfig.swift */,
+				CC4D9C4CF0119239D39ECCF101EA20C8 /* WebyclipCarouselItem.swift */,
+				161457118FF4E7E518015E16639235CE /* WebyclipCarouselProtocol.swift */,
+				F50CA27A29B4CB325A30C9CA67CA3EFF /* WebyclipContext.swift */,
+				67956AA4384CE2163FF3C107CF4C80CD /* WebyclipContextConfig.swift */,
+				09FD4F50333FFF5064EC8B9D9845EE0F /* WebyclipMedia.swift */,
+				634C707E8D6E9CBE059172781967E96B /* WebyclipPlayerConfig.swift */,
+				6A8E8725A603AFD3907896A30021BDA9 /* WebyclipPlayerItem.swift */,
+				CC5091EC573416383760A3C892E64464 /* WebyclipPlayerProtocol.swift */,
+				1CC3D679943F77F09A2ACCBDC7660D6C /* WebyclipRelatedItem.swift */,
+				70D4948042A145C15B07D40FC13C69D8 /* WebyclipSession.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		B9B2FDE31DD86BAC00B92E4F /* WebyclipCarousel */ = {
+			isa = PBXGroup;
+			children = (
+				623614836456BEEEADCB725D905D86C5 /* WebyclipCarouselBaseController.swift */,
+				B9B2FDE41DD86CC000B92E4F /* WebyclipCarouselDefaultController.swift */,
+				B9B2FDE71DD87E0700B92E4F /* WebyclipCarouselCompactController.swift */,
+				5A5643A09B68469AA3431A59CAE54F3D /* WebyclipCarouselCell.swift */,
+			);
+			name = WebyclipCarousel;
+			sourceTree = "<group>";
+		};
 		CC2A02ACA35A2C2E83125B09FBAB345E /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -728,7 +755,6 @@
 				E4702B7CC609446EEB79025E2A09D780 /* Resources */,
 				01B89A5322C592FF028346F69506E646 /* Support Files */,
 			);
-			name = "youtube-ios-player-helper";
 			path = "youtube-ios-player-helper";
 			sourceTree = "<group>";
 		};
@@ -737,7 +763,6 @@
 			children = (
 				8921538D507B49608F49F900F83E179F /* Assets */,
 			);
-			name = WebyclipSDK;
 			path = WebyclipSDK;
 			sourceTree = "<group>";
 		};
@@ -991,6 +1016,7 @@
 			files = (
 				B35F9BCA74547B37EF08A2E97C5D5BEE /* Images.xcassets in Resources */,
 				E7124A653464FAF4FB49B9687576923C /* WebyclipCarousel.xib in Resources */,
+				B9B2FDEA1DD8876700B92E4F /* WebyclipCarouselCompactCell.xib in Resources */,
 				AF9B1D6A82022C22DFBB87A6CCEF08B4 /* WebyclipCarouselCell.xib in Resources */,
 				21407290DA070834C4BD5C73D8F58997 /* WebyclipPlayer.xib in Resources */,
 				7B539010E340E680099F02F3AE7DB3E1 /* WebyclipPlayerCell.xib in Resources */,
@@ -1117,22 +1143,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC1C90327DA039A26982D8D5EB70D641 /* WebyclipCarouselCollectionViewCell.swift in Sources */,
+				EC1C90327DA039A26982D8D5EB70D641 /* WebyclipCarouselCell.swift in Sources */,
 				E076BCBED723BF8445CE61B91BED35BB /* WebyclipCarouselConfig.swift in Sources */,
-				614717A4F9AD2464C17475578EEA09A4 /* WebyclipCarouselController.swift in Sources */,
+				614717A4F9AD2464C17475578EEA09A4 /* WebyclipCarouselBaseController.swift in Sources */,
 				7EA10F005BADE85E1A15729016D44DC6 /* WebyclipCarouselItem.swift in Sources */,
 				6ED8999BF8300C97DFC665A6B74F3D10 /* WebyclipCarouselProtocol.swift in Sources */,
 				0E8528523909D02873A137269A6C8EBC /* WebyclipContext.swift in Sources */,
 				E117F4CC9056AFD9D1BA915A386CB470 /* WebyclipContextConfig.swift in Sources */,
 				7C219512845F2D3793C329A53B9076E4 /* WebyclipMedia.swift in Sources */,
-				23C7143FAD26BA88FCA922213470F33A /* WebyclipPlayerCollectionViewCell.swift in Sources */,
+				23C7143FAD26BA88FCA922213470F33A /* WebyclipPlayerCell.swift in Sources */,
 				37592D9BE9BAA3F15434768932F86006 /* WebyclipPlayerConfig.swift in Sources */,
 				90CCC0772B19CD80778FE86F22AE65ED /* WebyclipPlayerController.swift in Sources */,
 				BAD2AE43D0483BB0DDE4E6031AEFC763 /* WebyclipPlayerItem.swift in Sources */,
+				B9B2FDE91DD87FE700B92E4F /* WebyclipCarouselCompactController.swift in Sources */,
 				10CD8FE5A55092352971549776C3878D /* WebyclipPlayerProtocol.swift in Sources */,
 				C27AC5F203B5888A28A53115DD5F4324 /* WebyclipRelatedItem.swift in Sources */,
 				DBAC000D1D6DBBBD88E38AF1BE866CE5 /* WebyclipSDK-dummy.m in Sources */,
 				2DC04B97F66EB2EDA53362BF50BA962D /* WebyclipSDKManager.swift in Sources */,
+				B9B2FDE61DD871B300B92E4F /* WebyclipCarouselDefaultController.swift in Sources */,
 				92165C7B0BE2BDF4057B7764D82A6E76 /* WebyclipSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
