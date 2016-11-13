@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WebyClip Carousel Cell" id="jC4-5y-lbK" customClass="WebyclipCarouselCollectionViewCell" customModule="WebyclipSDK" customModuleProvider="target">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WebyClip Carousel Cell" id="jC4-5y-lbK" customClass="WebyclipCarouselCell" customModule="WebyclipSDK" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="280" height="220"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -29,11 +29,15 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZN-ow-ztL">
                         <rect key="frame" x="0.0" y="0.0" width="280" height="166"/>
                         <connections>
-                            <action selector="openPlayerHandler:" destination="jC4-5y-lbK" eventType="touchDown" id="7RO-Ps-wGY"/>
+                            <action selector="openPlayerHandler:" destination="jC4-5y-lbK" eventType="touchDown" id="juE-W8-h91"/>
                         </connections>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playbutton" translatesAutoresizingMaskIntoConstraints="NO" id="fBL-IB-2BE">
-                        <rect key="frame" x="114" y="57" width="52" height="52"/>
+                        <rect key="frame" x="115" y="58" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="88v-jn-Ctt"/>
+                            <constraint firstAttribute="height" constant="50" id="Mxf-5y-cff"/>
+                        </constraints>
                     </imageView>
                 </subviews>
             </view>
@@ -49,8 +53,8 @@
                 <constraint firstAttribute="bottom" secondItem="KGb-c0-Ipb" secondAttribute="bottom" id="vv4-HY-Q4l"/>
             </constraints>
             <connections>
-                <outlet property="mediaThumbnail" destination="wZN-ow-ztL" id="VoN-mg-IRT"/>
-                <outlet property="mediaTitle" destination="KGb-c0-Ipb" id="8zA-3i-xS4"/>
+                <outlet property="mediaThumbnail" destination="wZN-ow-ztL" id="kkD-F2-Swd"/>
+                <outlet property="mediaTitle" destination="KGb-c0-Ipb" id="6vQ-OW-uuq"/>
             </connections>
             <point key="canvasLocation" x="375" y="51"/>
         </collectionViewCell>

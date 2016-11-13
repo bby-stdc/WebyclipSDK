@@ -62,14 +62,17 @@ open class WebyclipSession {
     /**
      Create a carousel component with a thumbnail for each media.
      
-     - parameter carouselConfig:    Carousel configuration `WebyclipCarouselConfig`
-     - parameter playerConfig:    Player configuration `WebyclipPlayerConfig`
      - parameter context:   Bind this carousel to a context. When the context loads, the context medias will be set to the carousel.
+     - parameter carouselConfig:    Carousel configuration `WebyclipCarouselConfig`
+     - parameter player:    Player object `WebyclipPlayerController`
 
      - returns `WebyclipCarouselController`
      */
-    open func createCarousel(_ context: WebyclipContext, player: WebyclipPlayerController, carouselConfig: WebyclipCarouselConfig) -> WebyclipCarouselController {
-        return WebyclipCarouselController(session: self, context: context, player: player)
+    open func createCarousel(_ context: WebyclipContext, player: WebyclipPlayerController, carouselConfig: WebyclipCarouselConfig) -> WebyclipCarouselBaseController {
+        if (carouselConfig.compact) {
+            return WebyclipCarouselCompactController(session: self, context: context, player: player, config: carouselConfig)
+        }
+        return WebyclipCarouselDefaultController(session: self, context: context, player: player, config: carouselConfig)
     }
 
     /**

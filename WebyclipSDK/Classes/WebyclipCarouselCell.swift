@@ -1,8 +1,8 @@
-class WebyclipCarouselCollectionViewCell: UICollectionViewCell {
+class WebyclipCarouselCell: UICollectionViewCell {
     
     // MARK: - IBOtlets
-    @IBOutlet var mediaThumbnail: UIButton!
-    @IBOutlet var mediaTitle: UILabel!
+    @IBOutlet weak var mediaThumbnail: UIButton!
+    @IBOutlet weak var mediaTitle: UILabel!
     
     // MARK: - IBActions
     @IBAction func openPlayerHandler(_ sender: AnyObject) {

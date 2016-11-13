@@ -62,8 +62,8 @@ open class WebyclipPlayerController: UIViewController {
         return view
     }
     
-    fileprivate func getActiveCell() -> WebyclipPlayerCollectionViewCell? {
-        let cells = self.player?.visibleCells as! [WebyclipPlayerCollectionViewCell]
+    fileprivate func getActiveCell() -> WebyclipPlayerCell? {
+        let cells = self.player?.visibleCells as! [WebyclipPlayerCell]
         let idx = cells.index(where: {
             $0.media.mediaId == self.medias![self.currentIndex!].mediaId
         })
@@ -215,7 +215,7 @@ extension WebyclipPlayerController: UICollectionViewDataSource {
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: View.CellIdentifier, for: indexPath) as! WebyclipPlayerCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: View.CellIdentifier, for: indexPath) as! WebyclipPlayerCell
         
         cell.media = self.medias![indexPath.item]
         cell.mediaPlayer.delegate = self
@@ -244,7 +244,7 @@ extension WebyclipPlayerController: UIScrollViewDelegate {
         self.currentIndex = intIndex
         
         if let cell = self.player?.cellForItem(at: IndexPath(item: intIndex, section: 0)) {
-            let wcCell = cell as! WebyclipPlayerCollectionViewCell
+            let wcCell = cell as! WebyclipPlayerCell
             wcCell.mediaPlayer.isUserInteractionEnabled = true
             wcCell.mediaPlayer.alpha = 1
             wcCell.mediaPlayer.playVideo()
@@ -255,7 +255,7 @@ extension WebyclipPlayerController: UIScrollViewDelegate {
     }
     
     public func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
-        for view in self.player.visibleCells as! [WebyclipPlayerCollectionViewCell] {
+        for view in self.player.visibleCells as! [WebyclipPlayerCell] {
             view.mediaPlayer.isUserInteractionEnabled = false
             view.mediaPlayer.alpha = 0.15
         }
