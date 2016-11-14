@@ -12,7 +12,7 @@ open class WebyclipCarouselDefaultController: WebyclipCarouselBaseController {
         let view = loadViewFromNib()
         self.view.addSubview(view)
         
-        self.carousel.register(UINib(nibName: "WebyclipCarouselCell", bundle: Bundle(for: type(of: self))), forCellWithReuseIdentifier: "WebyClip Carousel Cell")
+        self.carousel.register(UINib(nibName: "WebyclipCarouselDefaultCell", bundle: Bundle(for: type(of: self))), forCellWithReuseIdentifier: "WebyClip Carousel Default Cell")
     }
     
     public override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -27,7 +27,7 @@ open class WebyclipCarouselDefaultController: WebyclipCarouselBaseController {
     }
     
     public override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WebyClip Carousel Cell", for: indexPath) as! WebyclipCarouselCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "WebyClip Carousel Default Cell", for: indexPath) as! WebyclipCarouselCell
         
         cell.media = self.medias![indexPath.item]
         cell.clickDelegate = {

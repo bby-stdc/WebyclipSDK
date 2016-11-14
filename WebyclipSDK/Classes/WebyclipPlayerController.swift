@@ -157,10 +157,9 @@ open class WebyclipPlayerController: UIViewController {
     /**
      Open player frame
      
-     - parameter WebyclipMedia?:    initial media object `WebyclipMedia` for showing. Pass nil for starting from the beginning
+     - parameter WebyclipMedia?:    initial media object `WebyclipMedia` for showing.
      */
-    open func openPlayer(_ media: WebyclipMedia?) {
-        print("PLAY")
+    open func openPlayer(_ media: WebyclipMedia? = nil) {
         if media == nil {
             self.initialIndex = 0
         }

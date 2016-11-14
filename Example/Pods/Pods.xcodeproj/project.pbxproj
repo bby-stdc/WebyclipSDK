@@ -89,7 +89,7 @@
 		A9CDFE2F8024CD13A9A3E8B361BE41AE /* OFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29BF65959D963DDED22A4B1906C61734 /* OFB.swift */; };
 		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B7144E1B5953B14BF6AEBBE3D227BEE /* Alamofire-dummy.m */; };
 		AE1EF48399533730D0066E04B22CA2D6 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF45336FF973BBABA96C740CDD3CA8D /* SessionManager.swift */; };
-		AF9B1D6A82022C22DFBB87A6CCEF08B4 /* WebyclipCarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48A8AF3AD5382548F47B60C2F98FB27 /* WebyclipCarouselCell.xib */; };
+		AF9B1D6A82022C22DFBB87A6CCEF08B4 /* WebyclipCarouselDefaultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A48A8AF3AD5382548F47B60C2F98FB27 /* WebyclipCarouselDefaultCell.xib */; };
 		B13EBCF64AB16A897C291AEEEA16DF31 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67C327E8A5E28E30BF02291902AEA98 /* AES.swift */; };
 		B165D1F1B0561880554A2553DA550D53 /* SecureBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36B7C62357924BF23A37FDD92BDB202 /* SecureBytes.swift */; };
 		B250CE6F75E38022631AAB914DB7E092 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F9C1083BDA48D914C31A7D039875D9 /* SHA1.swift */; };
@@ -298,7 +298,7 @@
 		9E5C6F3BB4F9401D84B446A27BE9B0D6 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
 		A32DA86FF64CCC58B096DA589F0FE03C /* PBKDF1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PBKDF1.swift; path = Sources/CryptoSwift/PKCS5/PBKDF1.swift; sourceTree = "<group>"; };
 		A4022E3C3C952FC6DE418306C86AD813 /* TaskDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TaskDelegate.swift; path = Source/TaskDelegate.swift; sourceTree = "<group>"; };
-		A48A8AF3AD5382548F47B60C2F98FB27 /* WebyclipCarouselCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WebyclipCarouselCell.xib; sourceTree = "<group>"; };
+		A48A8AF3AD5382548F47B60C2F98FB27 /* WebyclipCarouselDefaultCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = WebyclipCarouselDefaultCell.xib; sourceTree = "<group>"; };
 		A5CC0579D1C52C13039160B914700BC8 /* AES+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AES+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/AES+Foundation.swift"; sourceTree = "<group>"; };
 		A5F5E4889100BF58B7918F37639B330C /* DigestType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DigestType.swift; path = Sources/CryptoSwift/DigestType.swift; sourceTree = "<group>"; };
 		A77C7A5EFEA973D4F341697C4C52F452 /* youtube_ios_player_helper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = youtube_ios_player_helper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -660,7 +660,7 @@
 			children = (
 				CDF79E604C0C09AD88E769BB6A606772 /* Images.xcassets */,
 				4DA318FB8A19BD51F15E4925291D0FAC /* WebyclipCarousel.xib */,
-				A48A8AF3AD5382548F47B60C2F98FB27 /* WebyclipCarouselCell.xib */,
+				A48A8AF3AD5382548F47B60C2F98FB27 /* WebyclipCarouselDefaultCell.xib */,
 				B9B2FDE21DD8601D00B92E4F /* WebyclipCarouselCompactCell.xib */,
 				E9E4B7812E18186FA84D22E82ABA085F /* WebyclipPlayer.xib */,
 				C066D56A1E5239F3D07A81C28F0EFCAE /* WebyclipPlayerCell.xib */,
@@ -1017,7 +1017,7 @@
 				B35F9BCA74547B37EF08A2E97C5D5BEE /* Images.xcassets in Resources */,
 				E7124A653464FAF4FB49B9687576923C /* WebyclipCarousel.xib in Resources */,
 				B9B2FDEA1DD8876700B92E4F /* WebyclipCarouselCompactCell.xib in Resources */,
-				AF9B1D6A82022C22DFBB87A6CCEF08B4 /* WebyclipCarouselCell.xib in Resources */,
+				AF9B1D6A82022C22DFBB87A6CCEF08B4 /* WebyclipCarouselDefaultCell.xib in Resources */,
 				21407290DA070834C4BD5C73D8F58997 /* WebyclipPlayer.xib in Resources */,
 				7B539010E340E680099F02F3AE7DB3E1 /* WebyclipPlayerCell.xib in Resources */,
 			);

@@ -10,7 +10,7 @@ class ViewController: UIViewController, WebyclipCarouselProtocol, WebyclipPlayer
     var playerController : WebyclipPlayerController?
     
     @IBAction func openPlayerHandler(_ sender: AnyObject) {
-        self.playerController!.openPlayer(nil)
+        self.playerController!.openPlayer()
     }
     
     override func viewDidLoad() {
