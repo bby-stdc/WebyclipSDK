@@ -10,14 +10,18 @@ class ViewController: UIViewController, WebyclipCarouselProtocol, WebyclipPlayer
     var playerController : WebyclipPlayerController?
     
     @IBAction func openPlayerHandler(_ sender: AnyObject) {
-        self.playerController!.openPlayer()
+        guard self.playerController != nil else {
+            print("Player object is not exist")
+            return
+        }
+        self.playerController?.openPlayer()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let session = WebyclipSDKManager.sharedManager.createSession("bestbuy:bccc67d4b0e5885cd603-ad91f58f506454f5c2d14d3c7ead3377.ssl.cf2.rackcdn.com")
-        let contextConfig = WebyclipContextConfig(id: "027242891074")
+        let contextConfig = WebyclipContextConfig(id: "4710800")
         
         session.createContext(contextConfig, success:
             { context in

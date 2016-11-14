@@ -96,6 +96,7 @@
 		B35F9BCA74547B37EF08A2E97C5D5BEE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF79E604C0C09AD88E769BB6A606772 /* Images.xcassets */; };
 		B36EAE1B4DAFF771587BB25CAAC8168C /* String+FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19C014197695DE2E716B6E579B85A5E /* String+FoundationExtension.swift */; };
 		B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0830A52AE7F937377364B6FF1C095FA /* MultipartFormData.swift */; };
+		B9986B8B1DD9B22200D08465 /* WebyclipUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9986B8A1DD9B22200D08465 /* WebyclipUtils.swift */; };
 		B9B2FDE61DD871B300B92E4F /* WebyclipCarouselDefaultController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B2FDE41DD86CC000B92E4F /* WebyclipCarouselDefaultController.swift */; };
 		B9B2FDE91DD87FE700B92E4F /* WebyclipCarouselCompactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9B2FDE71DD87E0700B92E4F /* WebyclipCarouselCompactController.swift */; };
 		B9B2FDEA1DD8876700B92E4F /* WebyclipCarouselCompactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9B2FDE21DD8601D00B92E4F /* WebyclipCarouselCompactCell.xib */; };
@@ -309,6 +310,7 @@
 		ACF45336FF973BBABA96C740CDD3CA8D /* SessionManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SessionManager.swift; path = Source/SessionManager.swift; sourceTree = "<group>"; };
 		AE50C17923BCBF89636B83F7FE9F027B /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA11DDE8F54FB4BD0A3C8219F1F42AD /* youtube-ios-player-helper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "youtube-ios-player-helper-prefix.pch"; sourceTree = "<group>"; };
+		B9986B8A1DD9B22200D08465 /* WebyclipUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebyclipUtils.swift; path = ../WebyclipUtils.swift; sourceTree = "<group>"; };
 		B9B2FDE21DD8601D00B92E4F /* WebyclipCarouselCompactCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebyclipCarouselCompactCell.xib; sourceTree = "<group>"; };
 		B9B2FDE41DD86CC000B92E4F /* WebyclipCarouselDefaultController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipCarouselDefaultController.swift; sourceTree = "<group>"; };
 		B9B2FDE71DD87E0700B92E4F /* WebyclipCarouselCompactController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebyclipCarouselCompactController.swift; sourceTree = "<group>"; };
@@ -651,6 +653,7 @@
 				B9986B881DD8D74100D08465 /* WebyclipPlayer */,
 				B9B2FDE31DD86BAC00B92E4F /* WebyclipCarousel */,
 				BF3E45089331DEF46033B1AA0EB814D2 /* WebyclipSDKManager.swift */,
+				B9986B8A1DD9B22200D08465 /* WebyclipUtils.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1149,6 +1152,7 @@
 				7EA10F005BADE85E1A15729016D44DC6 /* WebyclipCarouselItem.swift in Sources */,
 				6ED8999BF8300C97DFC665A6B74F3D10 /* WebyclipCarouselProtocol.swift in Sources */,
 				0E8528523909D02873A137269A6C8EBC /* WebyclipContext.swift in Sources */,
+				B9986B8B1DD9B22200D08465 /* WebyclipUtils.swift in Sources */,
 				E117F4CC9056AFD9D1BA915A386CB470 /* WebyclipContextConfig.swift in Sources */,
 				7C219512845F2D3793C329A53B9076E4 /* WebyclipMedia.swift in Sources */,
 				23C7143FAD26BA88FCA922213470F33A /* WebyclipPlayerCell.swift in Sources */,

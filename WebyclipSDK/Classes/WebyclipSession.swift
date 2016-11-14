@@ -10,8 +10,101 @@ open class WebyclipSession {
     //MARK: - Private
     fileprivate var sslEndpoint: String
     
-    private func getDataFromServer() {
+    private func getDataFromCDN(id: String, completion: @escaping ([WebyclipMedia]) -> Void) {
+        var cdnIsValid = false
+        var webyclipMedia = [WebyclipMedia]()
         
+        let md5 = id.md5().md5()
+        let url = "https://\(self.sslEndpoint)/group/\(md5).json"
+        
+        Alamofire.request(url).responseString { response in
+            guard response.result.isSuccess else {
+                print("Error while fetching context: \(response.result.error)")
+                completion(webyclipMedia)
+                return
+            }
+            guard let value = response.result.value, value.range(of: "webyclipMediaForContext") != nil else {
+                print("Malformed data received from CDN")
+                completion(webyclipMedia)
+                return
+            }
+            
+            let jsonString = value.substring(with: Range<String.Index>(uncheckedBounds: (lower: value.index(value.startIndex, offsetBy: 24) , upper: value.index(value.endIndex, offsetBy: -1))))
+            
+            if let dataFromString = jsonString.data(using: String.Encoding.utf8, allowLossyConversion: false) {
+                let json = JSON(data: dataFromString)
+                
+                if (json["cdn_update_time"].exists()) {
+                    let cdnUpdateTime = Date(timeIntervalSince1970: json["cdn_update_time"].doubleValue / 1000)
+                    let now = Date()
+                    
+                    if (WebyclipUtils.getDaysBetweenDates(startDate: now, endDate: cdnUpdateTime) <= 3) {
+                        cdnIsValid = true;
+                    }
+                    else {
+                        let lateTimeHours = WebyclipUtils.getDaysBetweenDates(startDate: now, endDate: cdnUpdateTime) / 3600000 - 72
+                        let serverRate = max(10 - lateTimeHours, 1)
+                        let useOldCDN = floor(Float.random * Float(serverRate)) > 0
+                        
+                        if (useOldCDN) {
+                            cdnIsValid = true;
+                        }
+                    }
+                }
+                
+                //TODO: language check
+                
+                if (cdnIsValid) {
+                    for item in json["contexts"][0]["medias"].arrayValue {
+                        let mediaItem = WebyclipMedia(media: item)
+                        webyclipMedia.append(mediaItem)
+                    }
+                }
+            }
+            
+            completion(webyclipMedia)
+        }
+    }
+    
+    private func getDataFromServer(id: String, config: WebyclipContextConfig, completion: @escaping ([WebyclipMedia]) -> Void) {
+        var webyclipMedia = [WebyclipMedia]()
+        
+        let md5 = id.md5().md5()
+        let url = "https://app.webyclip.com/api.php?action=get_media_for_context_group"
+        let params: Parameters = [
+            "site_id": self.siteId,
+            "contexts": [
+                [
+                    "site_id": self.siteId,
+                    "type": config.type,
+                    "context_id": config.id,
+                    "tags": config.tags
+                ]
+            ],
+            "group_id": md5
+        ]
+        Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default).responseString { response in
+            guard response.result.isSuccess else {
+                print("Error while fetching context: \(response.result.error)")
+                completion(webyclipMedia)
+                return
+            }
+            guard let value = response.result.value else {
+                print("Malformed data received from server")
+                completion(webyclipMedia)
+                return
+            }
+            
+            if let dataFromString = value.data(using: String.Encoding.utf8, allowLossyConversion: false) {
+                let json = JSON(data: dataFromString)
+                for item in json["contexts"][0]["medias"].arrayValue {
+                    let mediaItem = WebyclipMedia(media: item)
+                    webyclipMedia.append(mediaItem)
+                }
+            }
+            
+            completion(webyclipMedia)
+        }
     }
     
     //MARK: - Public
@@ -31,32 +124,22 @@ open class WebyclipSession {
         - parameter error:      Callback that is called in case of error
      */
     open func createContext(_ config: WebyclipContextConfig, success: @escaping (_ context: WebyclipContext) -> Void, error: @escaping (_ error: NSError?) -> Void) {
-        
-        let md5 = config.id.md5().md5()
-        let url = "https://\(self.sslEndpoint)/group/\(md5).json"
-        
-        Alamofire.request(url).responseString { response in
-            guard response.result.isSuccess else {
-                print("Error while fetching context: \(response.result.error)")
-                self.getDataFromServer()
-                return
+        self.getDataFromCDN(id: config.id) { medias in
+            if medias.count > 0 {
+                success(WebyclipContext(items: medias))
             }
-            guard let value = response.result.value, value.range(of: "webyclipMediaForContext") != nil else {
-                print("Malformed data received from CDN")
-                self.getDataFromServer()
-                return
-            }
-            let jsonString = value.substring(with: Range<String.Index>(uncheckedBounds: (lower: value.index(value.startIndex, offsetBy: 24) , upper: value.index(value.endIndex, offsetBy: -1))))
-            var webyclipMedia = [WebyclipMedia]()
-            if let dataFromString = jsonString.data(using: String.Encoding.utf8, allowLossyConversion: false) {
-                let json = JSON(data: dataFromString)
-                for item in json["contexts"][0]["medias"].arrayValue {
-                    let mediaItem = WebyclipMedia(media: item)
-                    webyclipMedia.append(mediaItem)
+            else {
+                self.getDataFromServer(id: config.id, config: config) { medias in
+                    if medias.count > 0 {
+                        success(WebyclipContext(items: medias))
+                    }
+                    else {
+                        
+                    }
                 }
-                success(WebyclipContext(items: webyclipMedia))
             }
         }
+        //success(WebyclipContext(items: medias))
     }
  
     /**
