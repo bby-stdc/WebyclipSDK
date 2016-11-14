@@ -20,7 +20,7 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MlH-9w-8fP">
                         <rect key="frame" x="0.0" y="0.0" width="234" height="220"/>
                         <connections>
-                            <action selector="openPlayerHandler:" destination="1bx-Ps-nmH" eventType="touchDown" id="EFz-9u-uIT"/>
+                            <action selector="openPlayerHandler:" destination="1bx-Ps-nmH" eventType="touchUpInside" id="Njq-FB-qDR"/>
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awb-m6-z5l">

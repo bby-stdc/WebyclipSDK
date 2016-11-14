@@ -29,7 +29,7 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZN-ow-ztL">
                         <rect key="frame" x="0.0" y="0.0" width="280" height="166"/>
                         <connections>
-                            <action selector="openPlayerHandler:" destination="jC4-5y-lbK" eventType="touchDown" id="juE-W8-h91"/>
+                            <action selector="openPlayerHandler:" destination="jC4-5y-lbK" eventType="touchUpInside" id="wtf-vD-5CE"/>
                         </connections>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playbutton" translatesAutoresizingMaskIntoConstraints="NO" id="fBL-IB-2BE">

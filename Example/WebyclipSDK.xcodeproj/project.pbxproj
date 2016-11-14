@@ -150,7 +150,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = FR6C4T4S3L;
+						DevelopmentTeam = Z6ZAZL38QA;
 						LastSwiftMigration = 0810;
 					};
 				};
@@ -359,7 +359,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FR6C4T4S3L;
+				DEVELOPMENT_TEAM = Z6ZAZL38QA;
 				INFOPLIST_FILE = WebyclipSDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -376,7 +376,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FR6C4T4S3L;
+				DEVELOPMENT_TEAM = Z6ZAZL38QA;
 				INFOPLIST_FILE = WebyclipSDK/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
