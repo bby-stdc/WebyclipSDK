@@ -4,6 +4,7 @@ before_install:
 - gem install xcpretty --no-document
 - gem install cocoapods --pre --no-rdoc --no-ri --no-document --quiet
 script:
+- pod update
 - pod lib lint
 deploy:
   provider: script
