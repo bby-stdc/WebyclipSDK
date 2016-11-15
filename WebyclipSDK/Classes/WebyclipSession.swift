@@ -160,11 +160,8 @@ open class WebyclipSession {
 
      - returns `WebyclipCarouselController`
      */
-    open func createCarousel(_ context: WebyclipContext, player: WebyclipPlayerController, carouselConfig: WebyclipCarouselConfig) -> WebyclipCarouselBaseController {
-        if (carouselConfig.compact) {
-            return WebyclipCarouselCompactController(session: self, context: context, player: player, config: carouselConfig)
-        }
-        return WebyclipCarouselDefaultController(session: self, context: context, player: player, config: carouselConfig)
+    open func createCarousel(_ context: WebyclipContext, player: WebyclipPlayerController, carouselConfig: WebyclipCarouselConfig, isCompact: Bool = false) -> WebyclipCarouselBaseController {
+        return WebyclipCarouselBaseController(session: self, context: context, player: player, config: carouselConfig, isCompact: isCompact)
     }
 
     /**
