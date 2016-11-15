@@ -1,0 +1,11 @@
+language: objective-c
+osx_image: xcode8
+before_install:
+- gem install xcpretty --no-document
+script:
+- pod lib lint
+deploy:
+  provider: script
+  script: ./scripts/push.sh
+  on:
+    tags: true
