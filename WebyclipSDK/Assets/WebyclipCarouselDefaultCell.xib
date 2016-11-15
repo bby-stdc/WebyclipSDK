@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,40 +17,50 @@
                 <rect key="frame" x="0.0" y="0.0" width="280" height="220"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carousel Item Title Carousel Item Title Carousel Item Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGb-c0-Ipb">
-                        <rect key="frame" x="0.0" y="180" width="280" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="jBG-u2-EQs"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
-                        <color key="textColor" red="0.0" green="0.23137254901960785" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZN-ow-ztL">
-                        <rect key="frame" x="0.0" y="0.0" width="280" height="166"/>
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="164"/>
                         <connections>
                             <action selector="openPlayerHandler:" destination="jC4-5y-lbK" eventType="touchUpInside" id="wtf-vD-5CE"/>
                         </connections>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playbutton" translatesAutoresizingMaskIntoConstraints="NO" id="fBL-IB-2BE">
-                        <rect key="frame" x="115" y="58" width="50" height="50"/>
+                        <rect key="frame" x="115" y="57" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="88v-jn-Ctt"/>
                             <constraint firstAttribute="height" constant="50" id="Mxf-5y-cff"/>
                         </constraints>
                     </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r8B-RK-6Pi">
+                        <rect key="frame" x="0.0" y="180" width="280" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carousel Item Title Carousel Item Title Carousel Item Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGb-c0-Ipb">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="38.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.23137254901960785" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KGb-c0-Ipb" firstAttribute="leading" secondItem="r8B-RK-6Pi" secondAttribute="leading" id="IGJ-nQ-r9J"/>
+                            <constraint firstAttribute="trailing" secondItem="KGb-c0-Ipb" secondAttribute="trailing" id="Sjh-Xc-rVc"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="KGb-c0-Ipb" secondAttribute="bottom" id="oDA-VW-5re"/>
+                            <constraint firstAttribute="height" constant="40" id="s89-E3-xsM"/>
+                            <constraint firstItem="KGb-c0-Ipb" firstAttribute="top" secondItem="r8B-RK-6Pi" secondAttribute="top" id="xCZ-fG-MGj"/>
+                        </constraints>
+                    </view>
                 </subviews>
             </view>
             <constraints>
                 <constraint firstItem="wZN-ow-ztL" firstAttribute="top" secondItem="jC4-5y-lbK" secondAttribute="top" id="AeA-Ik-OnE"/>
                 <constraint firstItem="wZN-ow-ztL" firstAttribute="leading" secondItem="jC4-5y-lbK" secondAttribute="leading" id="IRe-7o-IYP"/>
-                <constraint firstItem="KGb-c0-Ipb" firstAttribute="top" secondItem="wZN-ow-ztL" secondAttribute="bottom" constant="14" id="J5f-zF-4hn"/>
-                <constraint firstAttribute="trailing" secondItem="KGb-c0-Ipb" secondAttribute="trailing" id="ajr-Nf-gH7"/>
-                <constraint firstItem="KGb-c0-Ipb" firstAttribute="leading" secondItem="jC4-5y-lbK" secondAttribute="leading" id="eBu-dI-3lt"/>
+                <constraint firstItem="r8B-RK-6Pi" firstAttribute="leading" secondItem="jC4-5y-lbK" secondAttribute="leading" id="V3A-yw-z64"/>
+                <constraint firstAttribute="bottom" secondItem="r8B-RK-6Pi" secondAttribute="bottom" id="YsK-Ze-8Vh"/>
                 <constraint firstItem="fBL-IB-2BE" firstAttribute="centerY" secondItem="wZN-ow-ztL" secondAttribute="centerY" id="iIE-U3-Be4"/>
                 <constraint firstItem="fBL-IB-2BE" firstAttribute="centerX" secondItem="jC4-5y-lbK" secondAttribute="centerX" id="t09-9E-GsW"/>
                 <constraint firstAttribute="trailing" secondItem="wZN-ow-ztL" secondAttribute="trailing" id="uwd-oy-dh4"/>
-                <constraint firstAttribute="bottom" secondItem="KGb-c0-Ipb" secondAttribute="bottom" id="vv4-HY-Q4l"/>
+                <constraint firstItem="r8B-RK-6Pi" firstAttribute="top" secondItem="wZN-ow-ztL" secondAttribute="bottom" constant="16" id="x3s-3y-Qt7"/>
+                <constraint firstAttribute="trailing" secondItem="r8B-RK-6Pi" secondAttribute="trailing" id="yUM-TC-MV3"/>
             </constraints>
             <connections>
                 <outlet property="mediaThumbnail" destination="wZN-ow-ztL" id="kkD-F2-Swd"/>

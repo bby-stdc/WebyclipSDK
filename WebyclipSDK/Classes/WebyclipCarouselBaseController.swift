@@ -11,13 +11,15 @@ open class WebyclipCarouselBaseController: UIViewController {
     @IBOutlet var uiView: UIView!
     @IBOutlet var carousel: UICollectionView!
     
+    // MARK: - Public
+    public internal(set) var session: WebyclipSession?
+    public internal(set) var context: WebyclipContext?
+    public internal(set) var playerController: WebyclipPlayerController?
+    public internal(set) var config: WebyclipCarouselConfig?
+    
     // MARK: - Private
-    internal var session: WebyclipSession?
-    internal var context: WebyclipContext?
-    internal var playerController: WebyclipPlayerController?
     internal var medias: [WebyclipCarouselItem]?
     internal var cellWidth: CGFloat?
-    internal var config: WebyclipCarouselConfig?
     
     internal func loadViewFromNib() -> UIView {
         let bundle = Bundle(for: type(of: self))
@@ -49,13 +51,11 @@ open class WebyclipCarouselBaseController: UIViewController {
         super.init(coder: aDecoder)
     }
     
-    open override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    open override func viewDidAppear(_ animated: Bool) {
+    open override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
         self.uiView.frame = CGRect(x: 0, y: 0, width: (self.view.superview?.frame.width)!, height: (self.view.superview?.frame.height)!)
     }
+    
 }
 
 // MARK: - UICollectionViewDelegateFlowLayout
