@@ -10,8 +10,10 @@ open class WebyclipSession {
     //MARK: - Private
     fileprivate var sslEndpoint: String
     
-    private func getDataFromCDN(id: String, completion: @escaping ([WebyclipMedia]) -> Void) {
-        var cdnIsValid = false
+    private func getDataFromCDN(id: String,
+                                completion: @escaping ([WebyclipMedia]) -> Void,
+                                error: @escaping (_ error: NSError?) -> Void) {
+        
         var webyclipMedia = [WebyclipMedia]()
         
         let md5 = id.md5().md5()
@@ -20,18 +22,28 @@ open class WebyclipSession {
         Alamofire.request(url).responseString { response in
             guard response.result.isSuccess else {
                 print("Error while fetching context: \(response.result.error)")
-                completion(webyclipMedia)
+                error(nil)
                 return
             }
+            
+            guard response.response?.statusCode != 404 else {
+                print("Object not found on CDN")
+                error(nil)
+                return
+            }
+            
             guard let value = response.result.value, value.range(of: "webyclipMediaForContext") != nil else {
                 print("Malformed data received from CDN")
-                completion(webyclipMedia)
+                error(nil)
                 return
             }
             
             let jsonString = value.substring(with: Range<String.Index>(uncheckedBounds: (lower: value.index(value.startIndex, offsetBy: 24) , upper: value.index(value.endIndex, offsetBy: -1))))
             
             if let dataFromString = jsonString.data(using: String.Encoding.utf8, allowLossyConversion: false) {
+                
+                var cdnIsValid = false
+                
                 let json = JSON(data: dataFromString)
                 
                 if (json["cdn_update_time"].exists()) {
@@ -41,18 +53,8 @@ open class WebyclipSession {
                     if (WebyclipUtils.getDaysBetweenDates(startDate: now, endDate: cdnUpdateTime) <= 3) {
                         cdnIsValid = true;
                     }
-                    else {
-                        let lateTimeHours = WebyclipUtils.getDaysBetweenDates(startDate: now, endDate: cdnUpdateTime) / 3600000 - 72
-                        let serverRate = max(10 - lateTimeHours, 1)
-                        let useOldCDN = floor(Float.random * Float(serverRate)) > 0
-                        
-                        if (useOldCDN) {
-                            cdnIsValid = true;
-                        }
-                    }
                 }
                 
-                //TODO: language check
                 
                 if (cdnIsValid) {
                     for item in json["contexts"][0]["medias"].arrayValue {
@@ -60,13 +62,24 @@ open class WebyclipSession {
                         webyclipMedia.append(mediaItem)
                     }
                 }
+                else {
+                    error(nil)
+                    return
+                }
+            }
+            else {
+                error(nil)
+                return
             }
             
             completion(webyclipMedia)
         }
     }
     
-    private func getDataFromServer(id: String, config: WebyclipContextConfig, completion: @escaping ([WebyclipMedia]) -> Void) {
+    private func getDataFromServer(id: String,
+                                   config: WebyclipContextConfig,
+                                   completion: @escaping ([WebyclipMedia]) -> Void,
+                                   error: @escaping (_ error: NSError?) -> Void) {
         var webyclipMedia = [WebyclipMedia]()
         
         let md5 = id.md5().md5()
@@ -86,12 +99,12 @@ open class WebyclipSession {
         Alamofire.request(url, method: .post, parameters: params, encoding: JSONEncoding.default).responseString { response in
             guard response.result.isSuccess else {
                 print("Error while fetching context: \(response.result.error)")
-                completion(webyclipMedia)
+                error(nil)
                 return
             }
             guard let value = response.result.value else {
                 print("Malformed data received from server")
-                completion(webyclipMedia)
+                error(nil)
                 return
             }
             
@@ -124,22 +137,18 @@ open class WebyclipSession {
         - parameter error:      Callback that is called in case of error
      */
     open func createContext(_ config: WebyclipContextConfig, success: @escaping (_ context: WebyclipContext) -> Void, error: @escaping (_ error: NSError?) -> Void) {
-        self.getDataFromCDN(id: config.id) { medias in
-            if medias.count > 0 {
-                success(WebyclipContext(items: medias))
-            }
-            else {
-                self.getDataFromServer(id: config.id, config: config) { medias in
-                    if medias.count > 0 {
-                        success(WebyclipContext(items: medias))
-                    }
-                    else {
-                        
-                    }
-                }
-            }
-        }
-        //success(WebyclipContext(items: medias))
+        self.getDataFromCDN(id: config.id,
+                            completion:  { medias in
+                                success(WebyclipContext(items: medias))
+                            },
+                            error: {_ in 
+                                self.getDataFromServer(id: config.id,
+                                                       config: config,
+                                                       completion: { medias in
+                                                            success(WebyclipContext(items: medias))
+                                                       },
+                                                       error: error)
+                            })
     }
  
     /**

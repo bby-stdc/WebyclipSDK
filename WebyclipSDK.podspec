@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'WebyclipSDK'
-  s.version          = '0.5.2'
+  s.version          = '0.5.3'
   s.summary          = 'iOS SDK for Webyclipl widgets'
   s.description      = 'A native iOS SDK to show webyclip curated videos based on app content using the Webyclip Service'
   s.homepage         = 'https://github.com/enbaya/WebyclipSDK'

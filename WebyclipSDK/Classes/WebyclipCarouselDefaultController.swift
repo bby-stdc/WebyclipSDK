@@ -12,6 +12,13 @@ open class WebyclipCarouselDefaultController: WebyclipCarouselBaseController {
         let view = loadViewFromNib()
         self.view.addSubview(view)
         
+        NSLayoutConstraint.activate([
+            self.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            self.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            self.view.topAnchor.constraint(equalTo: view.topAnchor),
+            self.view.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
+        
         self.carousel.register(UINib(nibName: "WebyclipCarouselDefaultCell", bundle: Bundle(for: type(of: self))), forCellWithReuseIdentifier: "WebyClip Carousel Default Cell")
     }
     
