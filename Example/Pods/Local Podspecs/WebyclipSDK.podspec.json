@@ -1,7 +1,7 @@
 {
   "name": "WebyclipSDK",
-  "version": "0.5.3",
-  "summary": "iOS SDK for Webyclipl widgets",
+  "version": "0.6.2",
+  "summary": "iOS SDK for Webyclip widgets",
   "description": "A native iOS SDK to show webyclip curated videos based on app content using the Webyclip Service",
   "homepage": "https://github.com/enbaya/WebyclipSDK",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/enbaya/WebyclipSDK.git",
-    "tag": "0.5.3"
+    "tag": "0.6.2"
   },
   "platforms": {
     "ios": "9.0"

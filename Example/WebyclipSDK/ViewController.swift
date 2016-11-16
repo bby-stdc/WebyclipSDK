@@ -39,7 +39,7 @@ class ViewController: UIViewController, WebyclipCarouselProtocol, WebyclipPlayer
                     
                     // Carousel initialization (compact design)
                     let carouselConfigCompact = WebyclipCarouselConfig(compact: true)
-                    let carouselControllerCompact = session.createCarousel(context, player: self.playerController!, carouselConfig: carouselConfigCompact)
+                    let carouselControllerCompact = session.createCarousel(context, player: self.playerController!, carouselConfig: carouselConfigCompact, isCompact: true)
                     self.carouselViewCompact.addSubview(carouselControllerCompact.view)
                 }
         }, error: { error in
