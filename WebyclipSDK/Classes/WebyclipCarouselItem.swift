@@ -13,7 +13,10 @@ class WebyclipCarouselItem {
         var items: [WebyclipCarouselItem]? = []
         for media in medias {
             let url = URL(string: "https://img.youtube.com/vi/" + media.mediaId + "/mqdefault.jpg")!
-            let data = try! Data(contentsOf: url)
+            guard let data = try? Data(contentsOf: url) else {
+                debugPrint("ERROR: \(#file):(\(#line)) Unable to load carousel item: \(url.absoluteString)")
+                continue
+            }
             let image = UIImage(data: data)
             items?.append(WebyclipCarouselItem(mediaImage: image, title: media.title))
         }
