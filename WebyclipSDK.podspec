@@ -17,8 +17,8 @@ Pod::Spec.new do |s|
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
 
-   s.dependency "SwiftyJSON", "~> 3.1.1"
-   s.dependency "Alamofire", "~> 4.0.1"
-   s.dependency "CryptoSwift", "~> 0.6.6"
+   s.dependency "SwiftyJSON", "~> 4.0"
+   s.dependency "Alamofire", "~> 4.5"
+   s.dependency "CryptoSwift", "~> 0.8"
    s.dependency "youtube-ios-player-helper", "~> 0.1.6"
 end

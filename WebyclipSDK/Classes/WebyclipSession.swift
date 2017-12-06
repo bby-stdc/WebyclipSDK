@@ -40,12 +40,10 @@ open class WebyclipSession {
             
             let jsonString = value.substring(with: Range<String.Index>(uncheckedBounds: (lower: value.index(value.startIndex, offsetBy: 24) , upper: value.index(value.endIndex, offsetBy: -1))))
             
-            if let dataFromString = jsonString.data(using: String.Encoding.utf8, allowLossyConversion: false) {
+            if let dataFromString = jsonString.data(using: String.Encoding.utf8, allowLossyConversion: false), let json = try? JSON(data: dataFromString) {
                 
                 var cdnIsValid = false
-                
-                let json = JSON(data: dataFromString)
-                
+                                
                 if (json["cdn_update_time"].exists()) {
                     let cdnUpdateTime = Date(timeIntervalSince1970: json["cdn_update_time"].doubleValue / 1000)
                     let now = Date()
@@ -108,8 +106,8 @@ open class WebyclipSession {
                 return
             }
             
-            if let dataFromString = value.data(using: String.Encoding.utf8, allowLossyConversion: false) {
-                let json = JSON(data: dataFromString)
+            if let dataFromString = value.data(using: String.Encoding.utf8, allowLossyConversion: false), let json = try? JSON(data: dataFromString) {
+                
                 for item in json["contexts"][0]["medias"].arrayValue {
                     let mediaItem = WebyclipMedia(media: item)
                     webyclipMedia.append(mediaItem)
