@@ -3,3 +3,16 @@ use_frameworks!
 target 'WebyclipSDK_Example' do
   pod 'WebyclipSDK', :path => '../'
 end
+
+post_install do |installer|
+    
+    installer.pods_project.targets.each do |target|
+        
+        if target.name == 'Alamofire' || target.name == 'SwiftyJSON' || target.name == 'CryptoSwift'
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '4.0'
+            end
+        end
+    end
+    
+end

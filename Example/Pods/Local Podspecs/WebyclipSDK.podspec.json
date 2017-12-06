@@ -1,6 +1,6 @@
 {
   "name": "WebyclipSDK",
-  "version": "0.6.2",
+  "version": "0.6.5",
   "summary": "iOS SDK for Webyclip widgets",
   "description": "A native iOS SDK to show webyclip curated videos based on app content using the Webyclip Service",
   "homepage": "https://github.com/enbaya/WebyclipSDK",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/enbaya/WebyclipSDK.git",
-    "tag": "0.6.2"
+    "tag": "0.6.5"
   },
   "platforms": {
     "ios": "9.0"
@@ -22,13 +22,13 @@
   "resources": "WebyclipSDK/Assets/**/*.{xib,xcassets,bundle}",
   "dependencies": {
     "SwiftyJSON": [
-      "~> 3.1.1"
+      "~> 4.0"
     ],
     "Alamofire": [
-      "~> 4.0.1"
+      "~> 4.5"
     ],
     "CryptoSwift": [
-      "~> 0.6.6"
+      "~> 0.8"
     ],
     "youtube-ios-player-helper": [
       "~> 0.1.6"
